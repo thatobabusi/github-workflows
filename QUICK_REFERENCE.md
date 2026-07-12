@@ -4,30 +4,34 @@ Fast lookup guide for common workflows and standards.
 
 ## Branching Quick Commands
 
+**Branch naming:** `<type>/<YYYYMMDD>-<counter>-<Description>`
+
 ```bash
 # Start feature (ALWAYS from main)
+# Get today's date: date +%Y%m%d (20260712)
+# Check existing branches today to get counter (01, 02, 03...)
 git checkout main
 git pull origin main
-git checkout -b feature/my-feature
+git checkout -b feature/20260712-01-User-Authentication
 
 # Push and create PR to development
-git push -u origin feature/my-feature
-# Create PR: development ← feature/my-feature
+git push -u origin feature/20260712-01-User-Authentication
+# Create PR: development ← feature/20260712-01-User-Authentication
 
 # Create release branch (from development)
-git checkout -b qa/v1.2.0 development
-git push -u origin qa/v1.2.0
-# Create PR: uat/v1.2.0 ← qa/v1.2.0
+git checkout -b qa/20260715-01-v1.2.0-Testing development
+git push -u origin qa/20260715-01-v1.2.0-Testing
+# Create PR: uat/20260715-01-v1.2.0-Approval ← qa/20260715-01-v1.2.0-Testing
 
 # Promote to UAT (from qa)
-git checkout -b uat/v1.2.0 qa/v1.2.0
-git push -u origin uat/v1.2.0
-# Create PR: main ← uat/v1.2.0
+git checkout -b uat/20260715-01-v1.2.0-Approval qa/20260715-01-v1.2.0-Testing
+git push -u origin uat/20260715-01-v1.2.0-Approval
+# Create PR: main ← uat/20260715-01-v1.2.0-Approval
 
 # Release to main
 git checkout main
 git pull origin main
-git merge --no-ff uat/v1.2.0 -m "Release v1.2.0"
+git merge --no-ff uat/20260715-01-v1.2.0-Approval -m "Release v1.2.0"
 git tag -a v1.2.0 -m "Release v1.2.0"
 git push origin main --tags
 
@@ -38,12 +42,12 @@ git merge --no-ff main -m "Sync v1.2.0 to development"
 git push origin development
 
 # Hotfix
-git checkout -b hotfix/critical-bug main
-git commit -m "fix: critical production issue"
-git push -u origin hotfix/critical-bug
+git checkout -b hotfix/20260712-01-Security-Vulnerability main
+git commit -m "fix: critical security issue"
+git push -u origin hotfix/20260712-01-Security-Vulnerability
 # Fast-track PR and merge to main
 git checkout main
-git merge --no-ff hotfix/critical-bug -m "Hotfix v1.2.1"
+git merge --no-ff hotfix/20260712-01-Security-Vulnerability -m "Hotfix v1.2.1"
 git tag -a v1.2.1 -m "Hotfix v1.2.1"
 git push origin main --tags
 ```

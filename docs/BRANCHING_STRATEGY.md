@@ -65,20 +65,20 @@ main/master (production, stable)
 
 **Examples:**
 ```bash
-feature/user-authentication
-feature/payment-integration
-feature/admin-dashboard
-feature/api-rate-limiting
+feature/20260712-01-User-Authentication
+feature/20260712-02-Payment-Integration
+feature/20260713-01-Admin-Dashboard
+feature/20260713-02-API-Rate-Limiting
 ```
 
 **Process:**
 ```bash
 git checkout main
 git pull origin main
-git checkout -b feature/my-feature
+git checkout -b feature/20260712-01-User-Authentication
 # ... work and commit ...
-git push -u origin feature/my-feature
-# Create PR: development ← feature/my-feature
+git push -u origin feature/20260712-01-User-Authentication
+# Create PR: development ← feature/20260712-01-User-Authentication
 ```
 
 ### `qa/*` (Quality Assurance Testing)
@@ -298,35 +298,73 @@ Branch: development
 
 ## Naming Conventions
 
+All branches include date/time for tracking and organization.
+
+**Format:** `<type>/<YYYYMMDD>-<counter>-<Description>`
+
+- **type** — branch type (feature, hotfix, qa, uat)
+- **YYYYMMDD** — date branch created (ISO 8601)
+- **counter** — sequential number for that day (01, 02, 03, ...)
+- **Description** — clear, PascalCase or kebab-case
+
 ### Feature Branches
 ```
-feature/user-authentication
-feature/payment-gateway-integration
-feature/mobile-responsive-design
-feature/api-rate-limiting
-feature/dark-mode-support
+feature/20260712-01-User-Authentication
+feature/20260712-02-Payment-Integration
+feature/20260713-01-Mobile-Responsive-Design
+feature/20260715-01-API-Rate-Limiting
+feature/20260716-01-Dark-Mode-Support
+```
+
+**Today's feature count:**
+```
+feature/20260712-01-First-Feature      ← 1st feature on July 12
+feature/20260712-02-Second-Feature     ← 2nd feature on July 12
+feature/20260712-03-Third-Feature      ← 3rd feature on July 12
+feature/20260713-01-New-Day-Feature    ← 1st feature on July 13 (counter resets)
 ```
 
 ### QA Branches
 ```
-qa/v1.2.0
-qa/release-2026-07
-qa/sprint-15
+qa/20260715-01-v1.2.0-Testing
+qa/20260715-02-Sprint-Hotfixes
+qa/20260720-01-Release-Candidate
 ```
 
 ### UAT Branches
 ```
-uat/v1.2.0
-uat/release-candidate
-uat/client-acceptance
+uat/20260715-01-v1.2.0-Approval
+uat/20260715-02-Client-Testing
+uat/20260720-01-Final-Acceptance
 ```
 
 ### Hotfix Branches
 ```
-hotfix/security-vulnerability-cve-2024-1234
-hotfix/critical-data-loss-issue
-hotfix/payment-processing-bug
-hotfix/production-crash
+hotfix/20260712-01-Security-Vulnerability-CVE-2024-1234
+hotfix/20260713-01-Critical-Data-Loss-Issue
+hotfix/20260714-01-Payment-Processing-Bug
+hotfix/20260714-02-Production-Crash-Fix
+```
+
+### Branch Naming Benefits
+
+- **Chronological Order** — Easy to see when branch was created
+- **Unique Identifiers** — No name collisions across dates
+- **Sequential Tracking** — Counter shows how many branches that day
+- **Clear Organization** — Date-based organization in git branch list
+- **Easy Archival** — Old branches grouped by date
+- **Audit Trail** — When work was started is immediately visible
+
+### Examples in Git History
+
+```
+feature/20260701-01-Initial-Setup
+feature/20260701-02-Database-Schema
+feature/20260701-03-Auth-Middleware
+feature/20260702-01-User-Controller
+feature/20260702-02-API-Endpoints
+feature/20260703-01-Frontend-Components
+feature/20260704-01-Testing-Suite
 ```
 
 ## Key Principles
