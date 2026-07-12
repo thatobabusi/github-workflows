@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussion
+    url: https://github.com/thatobabusi/github-workflows/discussions
+    about: Ask questions or discuss ideas
+  - name: Security Issue
+    url: https://github.com/thatobabusi/github-workflows/security/advisories
+    about: Report security vulnerabilities privately
