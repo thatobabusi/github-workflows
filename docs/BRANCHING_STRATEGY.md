@@ -174,26 +174,53 @@ git push origin development
 
 ### Feature Development (1-2 weeks)
 
+**Visual Timeline:**
+```
+Day 1: Create Feature Branch
+├─ git checkout main
+├─ git pull origin main
+└─ git checkout -b feature/20260712-01-User-Auth
+
+Days 1-7: Development Work
+├─ feat(auth): add login form component
+├─ feat(auth): implement JWT validation
+├─ test(auth): add authentication tests
+└─ git push -u origin feature/20260712-01-User-Auth
+
+Day 7: Code Review
+├─ Create PR: development ← feature/20260712-01-User-Auth
+├─ Automated CI runs (tests, linting)
+├─ Team reviews code
+└─ Feedback loop (apply changes if needed)
+
+Day 8: Merge & Complete
+├─ 1 approval received ✅
+├─ Merge to development (squash or rebase)
+└─ Delete feature branch
+```
+
+**Command Example:**
 ```bash
 # 1. Always start from main
 git checkout main
 git pull origin main
 
 # 2. Create feature branch
-git checkout -b feature/user-auth
+git checkout -b feature/20260712-01-User-Auth
 
 # 3. Make changes with atomic commits
 git add .
 git commit -m "feat(auth): add login form component"
 git commit -m "feat(auth): implement JWT validation"
+git commit -m "test(auth): add authentication tests"
 
 # 4. Push and create PR
-git push -u origin feature/user-auth
-# Create PR on GitHub: development ← feature/user-auth
+git push -u origin feature/20260712-01-User-Auth
+# Create PR on GitHub: development ← feature/20260712-01-User-Auth
 # Request 1 review
 
 # 5. After approval, merge on GitHub
-# Delete branch: git branch -d feature/user-auth
+# Delete branch: git branch -d feature/20260712-01-User-Auth
 ```
 
 ### Release Workflow (monthly)

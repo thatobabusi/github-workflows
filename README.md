@@ -275,12 +275,160 @@ When discussing standards, link to relevant docs:
 - File structure → [FILE_STRUCTURE.md](docs/FILE_STRUCTURE.md)
 - Documentation → [DOCUMENTATION_STANDARDS.md](docs/DOCUMENTATION_STANDARDS.md)
 
+## 📊 Visual Workflow Diagrams
+
+### Branching Strategy
+
+```
+main/master (Production)
+     ↑
+     │ PR after UAT approval
+     │
+  uat/* (User Acceptance Testing)
+     ↑
+     │ Promotion after QA
+     │
+  qa/* (Quality Assurance)
+     ↑
+     │ Integration
+     │
+development (Development Integration)
+     ↑
+     │ PR from feature
+     │
+feature/* (Feature Development)
+     ↑
+     └─ Always branch from main
+```
+
+### Release Promotion Pipeline
+
+```
+┌─────────────┐
+│   Feature   │  Create from main
+│  Development│
+└──────┬──────┘
+       │
+       ↓ PR to development
+┌─────────────┐
+│    Dev      │  Integration testing
+│ Integration │
+└──────┬──────┘
+       │
+       ↓ Promotion to qa
+┌─────────────┐
+│     QA      │  Quality assurance
+│   Testing   │  Bug fixes
+└──────┬──────┘
+       │
+       ↓ Promotion to uat
+┌─────────────┐
+│     UAT     │  Business approval
+│    Testing  │  Final validation
+└──────┬──────┘
+       │
+       ↓ PR to main (after approval)
+┌─────────────┐
+│   RELEASE   │  Tag + GitHub Release
+│   TO PROD   │  Deploy to production
+└─────────────┘
+```
+
+### Commit Message Flow
+
+```
+feat(auth): add OAuth2 support
+        │
+        ↓
+┌──────────────────────────────┐
+│  Semantic Commit Format      │
+│  <type>(<scope>): <subject>  │
+│  - feat, fix, docs, test,    │
+│    refactor, perf, chore, ci │
+└──────────────────────────────┘
+        │
+        ↓
+┌──────────────────────────────┐
+│  Automated Changelog          │
+│  - Features grouped           │
+│  - Bug fixes grouped          │
+│  - Breaking changes flagged   │
+└──────────────────────────────┘
+        │
+        ↓
+┌──────────────────────────────┐
+│  GitHub Release Notes         │
+│  Auto-generated from commits  │
+└──────────────────────────────┘
+```
+
+### Testing Matrix
+
+```
+┌─────────────────────────────────────────────────┐
+│           Version Compatibility Matrix          │
+├─────────────────────────────────────────────────┤
+│ Laravel  │ PHP 5.6 │ PHP 7.x │ PHP 8.x │ Tests │
+├──────────┼─────────┼─────────┼─────────┼───────┤
+│    5.*   │   ✅    │ 7.0-7.4 │    ❌   │  56   │
+│    6.*   │   ❌    │ 7.2-7.4 │  8.0-8 │  56   │
+│    7.*   │   ❌    │ 7.2-7.4 │  8.0-8 │  56   │
+│    8.*   │   ❌    │ 7.3-7.4 │  8.0-8 │  56   │
+│    9.*   │   ❌    │   ❌    │ 8.0-8 │  56   │
+│   10.*   │   ❌    │   ❌    │ 8.0-8 │  56   │
+│   11.*   │   ❌    │   ❌    │ 8.2-8 │  56   │
+└─────────────────────────────────────────────────┘
+```
+
+### Branch Naming Convention
+
+```
+feature/YYYYMMDD-01-Feature-Name
+│       │          │  │   │
+│       │          │  │   └─ Descriptive name
+│       │          │  └───── Counter (01, 02, 03)
+│       │          └──────── Date created
+│       └───────────────────── Type
+└──────────────────────────── Prefix
+```
+
+### CI/CD Pipeline
+
+```
+┌─────────────┐
+│   Push/PR   │
+└──────┬──────┘
+       │
+       ├─ Tests (56+ combinations)
+       ├─ Static Analysis
+       ├─ Auto-labeling
+       └─ Dependabot (security)
+       │
+       ↓
+┌──────────────────┐
+│ All Pass? ✅     │
+└────────┬─────────┘
+         │
+    ┌────┴─────┐
+    │           │
+   YES         NO
+    │           │
+    ↓           ↓
+  MERGE    REQUEST CHANGES
+    │
+    ↓
+┌──────────────┐
+│ Deploy Flow  │
+│ (if enabled) │
+└──────────────┘
+```
+
 ## 📊 Key Features
 
 ✅ **Comprehensive** — Covers all aspects of GitHub workflow  
 ✅ **Reusable** — Templates and examples ready to copy  
 ✅ **Consistent** — Same standards across all projects  
-✅ **Well-documented** — Detailed guides with examples  
+✅ **Well-documented** — Detailed guides with examples and diagrams  
 ✅ **Modern** — Uses current best practices and tools  
 ✅ **Scalable** — Works for small and large projects  
 ✅ **Team-ready** — Facilitates collaboration  

@@ -2,14 +2,54 @@
 
 Semantic commit messages that enable automated changelog generation, clear history, and effective communication.
 
+## Semantic Commit Diagram
+
+```
+┌─────────────────────────────────────────────────────┐
+│          SEMANTIC COMMIT WORKFLOW                   │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  Developer writes semantic commits:                │
+│  ├─ feat(auth): add OAuth2 support                 │
+│  ├─ fix(payment): resolve race condition           │
+│  ├─ test(api): add endpoint tests                  │
+│  └─ docs(readme): update installation guide        │
+│                                                     │
+│  ↓                                                   │
+│                                                     │
+│  GitHub Actions Parse Commits                      │
+│  ├─ Identify commit type                           │
+│  ├─ Group by category                              │
+│  └─ Generate release notes                         │
+│                                                     │
+│  ↓                                                   │
+│                                                     │
+│  Automated Changelog Generated                     │
+│  ├─ Features (from feat commits)                   │
+│  ├─ Bug Fixes (from fix commits)                   │
+│  ├─ Performance (from perf commits)                │
+│  └─ Breaking Changes (from BREAKING footer)        │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
+
 ## Format
 
 ```
 <type>(<scope>): <subject>
+↓     ↓              ↓
+│     │              └─ Lowercase, no period, <50 chars
+│     └─ Feature area (auth, payment, api, etc)
+└─ Commit type (feat, fix, test, docs, etc)
 
-<body>
+<blank line>
 
-<footer>
+<body explaining WHY not WHAT>
+
+<blank line>
+
+<footer with issue references>
+Closes #123
 ```
 
 ## Types
