@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.0
+        uses: actions/checkout@v7.0.0
 
       - name: Label PR by files
         uses: actions/github-script@v9.0.0
