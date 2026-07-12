@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v7.0.0
         with:
           fetch-depth: 0
 
@@ -45,7 +45,7 @@ jobs:
         run: git push origin "v${{ github.event.inputs.version }}"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: v${{ github.event.inputs.version }}
           generate_release_notes: true
