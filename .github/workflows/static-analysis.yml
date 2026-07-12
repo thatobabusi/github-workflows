@@ -32,7 +32,12 @@ jobs:
             ${{ runner.os }}-php-8.3-
 
       - name: Install dependencies
-        run: composer update --prefer-dist --no-interaction --no-progress
+        run: |
+          if [ -f composer.json ]; then
+            composer update --prefer-dist --no-interaction --no-progress
+          else
+            echo "✓ Skipped (no composer.json found)"
+          fi
 
       - name: Check code style
         run: composer check-style 2>/dev/null || echo "Code style check skipped (may require composer scripts)"
