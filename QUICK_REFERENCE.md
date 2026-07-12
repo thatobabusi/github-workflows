@@ -5,36 +5,47 @@ Fast lookup guide for common workflows and standards.
 ## Branching Quick Commands
 
 ```bash
-# Start feature
-git checkout development
-git pull origin development
+# Start feature (ALWAYS from main)
+git checkout main
+git pull origin main
 git checkout -b feature/my-feature
 
-# Push and create PR
+# Push and create PR to development
 git push -u origin feature/my-feature
+# Create PR: development ← feature/my-feature
 
-# Create release
+# Create release branch (from development)
 git checkout -b qa/v1.2.0 development
 git push -u origin qa/v1.2.0
-# Then: uat/v1.2.0 ← qa/v1.2.0
-# Then: main ← uat/v1.2.0
+# Create PR: uat/v1.2.0 ← qa/v1.2.0
 
-# Tag and release
+# Promote to UAT (from qa)
+git checkout -b uat/v1.2.0 qa/v1.2.0
+git push -u origin uat/v1.2.0
+# Create PR: main ← uat/v1.2.0
+
+# Release to main
 git checkout main
+git pull origin main
 git merge --no-ff uat/v1.2.0 -m "Release v1.2.0"
 git tag -a v1.2.0 -m "Release v1.2.0"
 git push origin main --tags
 
+# Sync main back to development
+git checkout development
+git pull origin development
+git merge --no-ff main -m "Sync v1.2.0 to development"
+git push origin development
+
 # Hotfix
 git checkout -b hotfix/critical-bug main
-# ... fix and test ...
+git commit -m "fix: critical production issue"
+git push -u origin hotfix/critical-bug
+# Fast-track PR and merge to main
 git checkout main
 git merge --no-ff hotfix/critical-bug -m "Hotfix v1.2.1"
 git tag -a v1.2.1 -m "Hotfix v1.2.1"
 git push origin main --tags
-git checkout development
-git merge --no-ff main -m "Sync hotfix to development"
-git push origin development
 ```
 
 ## Commit Message Quick Format
@@ -152,23 +163,27 @@ git push -u origin development
 
 ### Feature Development (1-2 weeks)
 ```
-feature/my-feature → development (PR)
+main → feature/my-feature → PR to development
 ```
+(Always branch from main, merge to development first)
 
-### Monthly Release (1st of month)
+### Monthly Release Promotion
 ```
-development → qa/v1.2.0 → uat/v1.2.0 → main (tag)
+development → qa/v1.2.0 → uat/v1.2.0 → PR to main (tag release)
 ```
+(Linear promotion through testing gates)
 
 ### Critical Bug (same day)
 ```
 main → hotfix/bug-fix → main (tag + sync to development)
 ```
+(Direct to production for critical issues)
 
 ### Security Patch (immediate)
 ```
 main → hotfix/security → main (tag v1.1.1)
 ```
+(Fast-track hotfix to production)
 
 ## Troubleshooting Quick Fixes
 
