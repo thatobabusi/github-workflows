@@ -7,9 +7,11 @@ const CATEGORIES = [
   '🚀 Operations',
   '🛠️ Project Setup',
   '💡 Tips & Tricks',
+  '🔍 SEO',
+  '🐘 PHP Architecture',
 ];
 
-const TOTAL_DOCS = 20;
+const TOTAL_DOCS = 27;
 
 /** Expand a sidebar section by its title text (sections start collapsed). */
 async function expandSection(page: Page, title: string) {
@@ -246,7 +248,7 @@ test.describe('GitHub Workflows Standards Site - Full Scope', () => {
     });
 
     test('should build a table of contents from headings', async ({ page }) => {
-      await openDoc(page, 'Architecture', 'Design Patterns');
+      await openDoc(page, '🏗️ Architecture', 'Design Patterns');
 
       const tocItems = page.locator('#tocList .toc-item');
       expect(await tocItems.count()).toBeGreaterThan(3);
@@ -438,7 +440,7 @@ test.describe('GitHub Workflows Standards Site - Full Scope', () => {
       await expect(page.locator('#homeView')).toHaveClass(/active/);
 
       // 4. Browse via sidebar
-      await openDoc(page, 'Architecture', 'API Standards');
+      await openDoc(page, '🏗️ Architecture', 'API Standards');
       await expect(page.locator('#fileContent h1')).toContainText(/API Standards/i);
     });
 

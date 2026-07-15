@@ -86,6 +86,23 @@ const app = {
                     { name: 'Actions Advanced', file: 'ACTIONS_ADVANCED.md' },
                     { name: 'Nice to Know', file: 'NICE_TO_KNOW.md' }
                 ]
+            },
+            'seo': {
+                title: '🔍 SEO',
+                files: [
+                    { name: 'SEO Cheat Sheet', file: 'seo/SEO_CHEAT_SHEET.md' },
+                    { name: 'Meta Tags Reference', file: 'seo/SEO_META_TAGS.md' },
+                    { name: 'Technical SEO', file: 'seo/SEO_TECHNICAL.md' }
+                ]
+            },
+            'php': {
+                title: '🐘 PHP Architecture',
+                files: [
+                    { name: 'Project Structures', file: 'architecture/php/PHP_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'architecture/php/PHP_CODING_STYLES.md' },
+                    { name: 'Design Patterns (PHP)', file: 'architecture/php/PHP_DESIGN_PATTERNS.md' },
+                    { name: 'Frameworks', file: 'architecture/php/PHP_FRAMEWORKS.md' }
+                ]
             }
         };
 
@@ -244,8 +261,8 @@ const app = {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const file = link.dataset.doc;
-                const match = this.files.find(f => f.file === file);
-                this.loadFile('docs/' + file, match ? match.name : file);
+                const match = this.files.find(f => f.file === file || f.file.endsWith('/' + file));
+                this.loadFile(match ? match.path : 'docs/' + file, match ? match.name : file);
             });
         });
     },
