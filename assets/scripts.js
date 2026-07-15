@@ -99,7 +99,7 @@ const app = {
         sidebar.innerHTML = '';
         Object.entries(this.categories).forEach(([_key, cat]) => {
             const section = document.createElement('div');
-            section.className = 'sidebar-section';
+            section.className = 'sidebar-section collapsed';
 
             const title = document.createElement('div');
             title.className = 'sidebar-title';
