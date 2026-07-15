@@ -8,10 +8,13 @@ const CATEGORIES = [
   '🛠️ Project Setup',
   '💡 Tips & Tricks',
   '🔍 SEO',
-  '🐘 PHP Architecture',
+  '🐘 PHP',
+  '🐍 Python',
+  '☕ Java',
+  '⚙️ Dev Environment',
 ];
 
-const TOTAL_DOCS = 28;
+const TOTAL_DOCS = 39;
 
 /** Expand a sidebar section by its title text (sections start collapsed). */
 async function expandSection(page: Page, title: string) {

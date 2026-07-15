@@ -63,7 +63,7 @@ The complete standards library. Also browsable as an [interactive reference site
 | [Meta Tags Reference](seo/SEO_META_TAGS.md) | Copy-paste head: robots, Open Graph, Twitter cards, JSON-LD, canonicals, hreflang | 10 min |
 | [Technical SEO](seo/SEO_TECHNICAL.md) | robots.txt, sitemaps, redirects, Core Web Vitals, JS rendering, crawl budget | 12 min |
 
-## 🐘 PHP Architecture
+## 🐘 PHP
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
@@ -71,6 +71,32 @@ The complete standards library. Also browsable as an [interactive reference site
 | [Coding Styles](software-development/php/PHP_CODING_STYLES.md) | PSR-1/4/12, naming, modern PHP 8.2+ defaults, Pint/PHPStan enforcement | 10 min |
 | [Design Patterns (PHP)](software-development/php/PHP_DESIGN_PATTERNS.md) | Idiomatic PHP implementations: DI, factories, decorators, adapters, pattern smells | 15 min |
 | [Frameworks](software-development/php/PHP_FRAMEWORKS.md) | Laravel/Symfony/Slim trade-offs, full-stack pairings, evaluation checklist | 12 min |
+
+## 🐍 Python
+
+| Doc | What It Covers | Read Time |
+|-----|----------------|-----------|
+| [Project Structures](software-development/python/PYTHON_PROJECT_STRUCTURES.md) | src layout, FastAPI/Django/data layouts, pyproject rules | 10 min |
+| [Coding Styles](software-development/python/PYTHON_CODING_STYLES.md) | PEP 8, typing, modern 3.11+ idioms, ruff/mypy/uv toolchain | 10 min |
+| [Frameworks](software-development/python/PYTHON_FRAMEWORKS.md) | FastAPI/Django/Flask trade-offs, background work, pairings | 10 min |
+
+## ☕ Java
+
+| Doc | What It Covers | Read Time |
+|-----|----------------|-----------|
+| [Project Structures](software-development/java/JAVA_PROJECT_STRUCTURES.md) | Maven/Gradle layout, package-by-feature, multi-module, hexagonal, modern Java | 12 min |
+| [Spring Boot Essentials](software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md) | Starters, core pattern, config, slice testing, the traps | 12 min |
+| [Quarkus Essentials](software-development/java/quarkus/QUARKUS_ESSENTIALS.md) | Build-time wiring, dev mode, Panache, native images, vs Spring | 12 min |
+
+## ⚙️ Dev Environment
+
+| Doc | What It Covers | Read Time |
+|-----|----------------|-----------|
+| [Database Design](software-development/db/DATABASE_DESIGN.md) | Schema rules, normalization judgment, indexing, migration discipline | 12 min |
+| [SQL Cheat Sheet](software-development/db/SQL_CHEAT_SHEET.md) | Joins, window functions, CTEs, upserts, EXPLAIN reading | 12 min |
+| [Docker Cheat Sheet](software-development/docker/DOCKER_CHEAT_SHEET.md) | Daily commands, Dockerfile rules, Compose, image scanning in CI | 10 min |
+| [CLI Cheat Sheet](software-development/cli/CLI_CHEAT_SHEET.md) | Modern tool replacements, text surgery, safe scripting, one-liners | 10 min |
+| [Azure Essentials](software-development/azure/AZURE_ESSENTIALS.md) | Service map, az CLI, App Service/Container Apps, OIDC deploys, cost sanity | 12 min |
 
 ## Related
 

@@ -207,7 +207,7 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
     - robots.txt, sitemaps, status codes and redirects
     - Core Web Vitals, JS rendering, crawl budget
 
-### PHP Architecture
+### PHP
 
 25. **[Project Structures](docs/software-development/php/PHP_PROJECT_STRUCTURES.md)** (12 min read)
     - Six layouts from flat scripts to DDD, with a decision table
@@ -222,9 +222,48 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
 28. **[Frameworks](docs/software-development/php/PHP_FRAMEWORKS.md)** (12 min read)
     - Laravel/Symfony/Slim trade-offs and full-stack pairings
 
+### Python
+
+29. **[Project Structures](docs/software-development/python/PYTHON_PROJECT_STRUCTURES.md)** (10 min read)
+    - src layout, FastAPI/Django/data-science layouts, pyproject rules
+
+30. **[Coding Styles](docs/software-development/python/PYTHON_CODING_STYLES.md)** (10 min read)
+    - PEP 8, typing, modern 3.11+ idioms, ruff/mypy/uv toolchain
+
+31. **[Frameworks](docs/software-development/python/PYTHON_FRAMEWORKS.md)** (10 min read)
+    - FastAPI/Django/Flask trade-offs, background work, HTMX pairing
+
+### Java
+
+32. **[Project Structures](docs/software-development/java/JAVA_PROJECT_STRUCTURES.md)** (12 min read)
+    - Maven/Gradle layout, package-by-feature, multi-module, hexagonal
+
+33. **[Spring Boot Essentials](docs/software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md)** (12 min read)
+    - Starters, thin-controller pattern, config, slice testing, the traps
+
+34. **[Quarkus Essentials](docs/software-development/java/quarkus/QUARKUS_ESSENTIALS.md)** (12 min read)
+    - Build-time wiring, dev mode, Panache, native images, vs Spring Boot
+
+### Dev Environment
+
+35. **[Database Design](docs/software-development/db/DATABASE_DESIGN.md)** (12 min read)
+    - Schema rules, normalization judgment, indexing, migration discipline
+
+36. **[SQL Cheat Sheet](docs/software-development/db/SQL_CHEAT_SHEET.md)** (12 min read)
+    - Joins, window functions, CTEs, upserts, reading EXPLAIN
+
+37. **[Docker Cheat Sheet](docs/software-development/docker/DOCKER_CHEAT_SHEET.md)** (10 min read)
+    - Daily commands, Dockerfile best practices, Compose, CI image scanning
+
+38. **[CLI Cheat Sheet](docs/software-development/cli/CLI_CHEAT_SHEET.md)** (10 min read)
+    - Modern tool replacements (rg/fd/bat), text surgery, safe scripting
+
+39. **[Azure Essentials](docs/software-development/azure/AZURE_ESSENTIALS.md)** (12 min read)
+    - Service map, az CLI, App Service/Container Apps, OIDC deploys
+
 ### Quick Reference
 
-29. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+40. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
     - Common git commands
     - Commit message examples
     - Release checklist

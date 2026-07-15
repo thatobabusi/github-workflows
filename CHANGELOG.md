@@ -5,6 +5,11 @@ All notable changes to this project are documented here. Format follows [Keep a 
 ## [Unreleased]
 
 ### Added
+- **Software-development stack expansion** — 11 new docs filling the reorganized docs/software-development/ tree, plus a folder README index:
+  - Python: [Project Structures](docs/software-development/python/PYTHON_PROJECT_STRUCTURES.md), [Coding Styles](docs/software-development/python/PYTHON_CODING_STYLES.md), [Frameworks](docs/software-development/python/PYTHON_FRAMEWORKS.md)
+  - Java: [Project Structures](docs/software-development/java/JAVA_PROJECT_STRUCTURES.md), [Spring Boot Essentials](docs/software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md), [Quarkus Essentials](docs/software-development/java/quarkus/QUARKUS_ESSENTIALS.md)
+  - Dev Environment: [Database Design](docs/software-development/db/DATABASE_DESIGN.md), [SQL Cheat Sheet](docs/software-development/db/SQL_CHEAT_SHEET.md), [Docker Cheat Sheet](docs/software-development/docker/DOCKER_CHEAT_SHEET.md), [CLI Cheat Sheet](docs/software-development/cli/CLI_CHEAT_SHEET.md), [Azure Essentials](docs/software-development/azure/AZURE_ESSENTIALS.md)
+  - Three new sidebar categories (🐍 Python, ☕ Java, ⚙️ Dev Environment); PHP category renamed 🐘 PHP; site now serves 39 docs in 11 categories
 - [Content Writing](docs/seo/SEO_CONTENT_WRITING.md) — keyword research & intent, one-phrase-per-page, placement map, writing/readability rules, pillar-cluster topical authority, link earning, measurement loop; synthesized from Siteimprove, Orbit Media, Semrush, Bynder, energy.gov, and Michigan Tech best-practice guides
 - **SEO section** (docs/seo/, new sidebar category): [SEO Cheat Sheet](docs/seo/SEO_CHEAT_SHEET.md), [Meta Tags Reference](docs/seo/SEO_META_TAGS.md), [Technical SEO](docs/seo/SEO_TECHNICAL.md)
 - **PHP Architecture section** (docs/software-development/php/, new sidebar category): [Project Structures](docs/software-development/php/PHP_PROJECT_STRUCTURES.md), [Coding Styles](docs/software-development/php/PHP_CODING_STYLES.md), [Design Patterns (PHP)](docs/software-development/php/PHP_DESIGN_PATTERNS.md), [Frameworks](docs/software-development/php/PHP_FRAMEWORKS.md)

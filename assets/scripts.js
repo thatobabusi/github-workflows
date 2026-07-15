@@ -97,12 +97,38 @@ const app = {
                 ]
             },
             'php': {
-                title: '🐘 PHP Architecture',
+                title: '🐘 PHP',
                 files: [
                     { name: 'Project Structures', file: 'software-development/php/PHP_PROJECT_STRUCTURES.md' },
                     { name: 'Coding Styles', file: 'software-development/php/PHP_CODING_STYLES.md' },
                     { name: 'Design Patterns (PHP)', file: 'software-development/php/PHP_DESIGN_PATTERNS.md' },
                     { name: 'Frameworks', file: 'software-development/php/PHP_FRAMEWORKS.md' }
+                ]
+            },
+            'python': {
+                title: '🐍 Python',
+                files: [
+                    { name: 'Project Structures', file: 'software-development/python/PYTHON_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'software-development/python/PYTHON_CODING_STYLES.md' },
+                    { name: 'Frameworks', file: 'software-development/python/PYTHON_FRAMEWORKS.md' }
+                ]
+            },
+            'java': {
+                title: '☕ Java',
+                files: [
+                    { name: 'Project Structures', file: 'software-development/java/JAVA_PROJECT_STRUCTURES.md' },
+                    { name: 'Spring Boot Essentials', file: 'software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md' },
+                    { name: 'Quarkus Essentials', file: 'software-development/java/quarkus/QUARKUS_ESSENTIALS.md' }
+                ]
+            },
+            'devenv': {
+                title: '⚙️ Dev Environment',
+                files: [
+                    { name: 'Database Design', file: 'software-development/db/DATABASE_DESIGN.md' },
+                    { name: 'SQL Cheat Sheet', file: 'software-development/db/SQL_CHEAT_SHEET.md' },
+                    { name: 'Docker Cheat Sheet', file: 'software-development/docker/DOCKER_CHEAT_SHEET.md' },
+                    { name: 'CLI Cheat Sheet', file: 'software-development/cli/CLI_CHEAT_SHEET.md' },
+                    { name: 'Azure Essentials', file: 'software-development/azure/AZURE_ESSENTIALS.md' }
                 ]
             }
         };
