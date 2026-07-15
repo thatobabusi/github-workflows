@@ -47,7 +47,27 @@ package/
 
 Rules: nothing executable above `bin/`+`public/`, `src/` maps 1:1 to the root namespace, `tests/` mirrors `src/`.
 
-## 3. Slim MVC (no-framework or micro-framework apps)
+## 3. Generic Default (framework-agnostic apps)
+
+The community-consensus default when no framework dictates the layout ([reference](https://roman-huliak.medium.com/how-to-structure-a-php-project-best-practices-and-real-examples-a934b44ac90d)):
+
+```
+my-php-app/
+├── bin/                 # CLI tools and scripts
+├── config/              # configuration files
+├── public/              # web root (index.php, assets)
+├── src/                 # application source (PSR-4)
+├── templates/           # templates or views
+├── tests/               # automated tests
+├── translations/        # localization files
+├── var/                 # cache, logs (gitignored)
+├── vendor/              # Composer dependencies
+├── .env                 # environment variables (gitignored)
+├── composer.json
+└── README.md
+```
+
+## 4. Slim MVC (no-framework or micro-framework apps)
 
 ```
 app/
@@ -66,7 +86,7 @@ app/
 
 The one absolute rule at every size: **only `public/` is in the webroot.** Config, src, and vendor sit above it, unreachable by URL.
 
-## 4. Laravel Default (the standard app)
+## 5. Laravel Default (the standard app)
 
 ```
 app/
@@ -88,7 +108,7 @@ app/
 
 Convention over invention — full layout and role rules in [File Structure](../../FILE_STRUCTURE.md). Don't fight the skeleton; extend it (`Services/`, `Actions/`, `Support/`) rather than relocating it.
 
-## 5. Modular Monolith (large app, clear domains)
+## 6. Modular Monolith (large app, clear domains)
 
 One deployable, hard module boundaries:
 
@@ -114,7 +134,7 @@ Rules that make it real (otherwise it's just folders):
 - Each module registers itself via its own ServiceProvider
 - A module could become a service later; that pressure keeps boundaries honest
 
-## 6. DDD Layers (complex domains)
+## 7. DDD Layers (complex domains)
 
 ```
 src/
