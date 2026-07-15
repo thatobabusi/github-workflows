@@ -7,9 +7,14 @@
     "lint:html": "htmlhint index.html",
     "lint:css": "stylelint assets/**/*.css",
     "lint:js": "eslint assets/scripts.js",
+    "test:e2e": "playwright test",
+    "test:e2e:chromium": "playwright test --project=chromium",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
     "dev": "python -m http.server 8090"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.0",
     "eslint": "^8.57.0",
     "htmlhint": "^1.1.4",
     "stylelint": "^15.11.0",
