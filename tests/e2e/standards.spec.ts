@@ -11,7 +11,7 @@ const CATEGORIES = [
   '🐘 PHP Architecture',
 ];
 
-const TOTAL_DOCS = 27;
+const TOTAL_DOCS = 28;
 
 /** Expand a sidebar section by its title text (sections start collapsed). */
 async function expandSection(page: Page, title: string) {

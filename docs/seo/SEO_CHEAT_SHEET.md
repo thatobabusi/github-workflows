@@ -1,16 +1,18 @@
 # SEO Cheat Sheet
 
-On-page SEO essentials — the checklist for every public page. Companion references: [Meta Tags](SEO_META_TAGS.md) and [Technical SEO](SEO_TECHNICAL.md).
+On-page SEO essentials — the checklist for every public page. Companions: [Content Writing](SEO_CONTENT_WRITING.md) (keyword strategy, writing rules), [Meta Tags](SEO_META_TAGS.md), and [Technical SEO](SEO_TECHNICAL.md).
 
 ## The Non-Negotiables Per Page
 
 | Element | Rule | Limit |
 |---------|------|-------|
-| `<title>` | Unique per page, primary keyword near the front | ~60 chars |
-| Meta description | Unique, compelling, includes keyword — it's ad copy for the SERP | ~155 chars |
-| `<h1>` | Exactly one, matches search intent | — |
-| URL | Short, lowercase, hyphens, keyword included | 3–5 words |
+| `<title>` | Unique per page; pattern: `Primary Keyword — Secondary | Brand`, keyword near the front, no jargon or slogans | 55–60 chars |
+| Meta description | Unique, keyword near the front, action verb ("learn", "build"), reads as ad copy for the SERP | 150–160 chars |
+| `<h1>` | Exactly one, contains the target phrase, matches search intent | — |
+| URL | Short, lowercase, hyphens, keyword slug — drop articles ("the", "a") and dates | 3–5 words |
 | Canonical | Present on every page, self-referencing by default | — |
+
+One more rule from the [content doc](SEO_CONTENT_WRITING.md) that governs everything here: **one target keyword phrase per page** — different phrases get different pages.
 
 ```html
 <title>Laravel Queue Jobs — Complete Guide | SiteName</title>
@@ -29,6 +31,7 @@ On-page SEO essentials — the checklist for every public page. Companion refere
 - Never skip levels (h1 → h3) or pick tags for their font size — that's CSS's job
 - Headings should read as an outline of the page: a scanner should get the story from headings alone
 - Include secondary keywords in h2s naturally — never stuff
+- **Phrase some h2s as the questions people actually search** ("How do queue retries work?") and answer in the first sentence below — that's the featured-snippet formula
 
 ## URL Structure
 
@@ -47,8 +50,9 @@ On-page SEO essentials — the checklist for every public page. Companion refere
 
 ### Internal
 - Every page reachable within 3 clicks of home
-- Descriptive anchor text: "see the [queue configuration guide]" — never "click here"
-- Link related content both directions (hub ↔ spokes)
+- Descriptive anchor text using the *destination's* keywords: "see the [queue configuration guide]" — never "click here"
+- Link related content both directions (hub ↔ spokes); see [pillar & cluster](SEO_CONTENT_WRITING.md)
+- **New pages get links from established pages** — that's what gets them crawled and indexed fast
 - Fix broken internal links — crawl budget and users both suffer
 
 ### External
@@ -76,6 +80,15 @@ On-page SEO essentials — the checklist for every public page. Companion refere
 - Freshness matters where recency matters: update and re-date content that claims currency
 - Duplicate content: one canonical version, 301 or `rel=canonical` everything else
 
+## Documents (PDFs & Downloads)
+
+Files rank too, and compete with your own pages if you let them:
+
+- Unique document title (in file metadata) that doesn't collide with an existing page's target
+- Keywords in the filename: `solar-rebate-guide-2026.pdf`, not `final_v3.pdf`
+- Only publish a document when it adds value a webpage doesn't already provide — otherwise it cannibalizes
+- Prefer HTML over PDF for anything users should find via search
+
 ## E-E-A-T Signals
 
 - Author byline with a real bio for expertise-sensitive topics
@@ -95,6 +108,7 @@ On-page SEO essentials — the checklist for every public page. Companion refere
 
 ## See Also
 
+- [SEO Content Writing](SEO_CONTENT_WRITING.md) — keyword strategy, writing rules, measurement
 - [Meta Tags Reference](SEO_META_TAGS.md)
 - [Technical SEO](SEO_TECHNICAL.md)
 - [Documentation Standards](../DOCUMENTATION_STANDARDS.md)

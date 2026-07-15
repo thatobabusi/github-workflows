@@ -59,6 +59,7 @@ The complete standards library. Also browsable as an [interactive reference site
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
 | [SEO Cheat Sheet](seo/SEO_CHEAT_SHEET.md) | Per-page on-page checklist: titles, headings, URLs, links, images, E-E-A-T, 60-second audit | 10 min |
+| [Content Writing](seo/SEO_CONTENT_WRITING.md) | Keyword research & intent, placement map, writing rules, pillar-cluster, link earning, measurement loop | 12 min |
 | [Meta Tags Reference](seo/SEO_META_TAGS.md) | Copy-paste head: robots, Open Graph, Twitter cards, JSON-LD, canonicals, hreflang | 10 min |
 | [Technical SEO](seo/SEO_TECHNICAL.md) | robots.txt, sitemaps, redirects, Core Web Vitals, JS rendering, crawl budget | 12 min |
 
@@ -66,10 +67,10 @@ The complete standards library. Also browsable as an [interactive reference site
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
-| [Project Structures](architecture/php/PHP_PROJECT_STRUCTURES.md) | Six layouts from flat scripts to DDD, with a decision table | 12 min |
-| [Coding Styles](architecture/php/PHP_CODING_STYLES.md) | PSR-1/4/12, naming, modern PHP 8.2+ defaults, Pint/PHPStan enforcement | 10 min |
-| [Design Patterns (PHP)](architecture/php/PHP_DESIGN_PATTERNS.md) | Idiomatic PHP implementations: DI, factories, decorators, adapters, pattern smells | 15 min |
-| [Frameworks](architecture/php/PHP_FRAMEWORKS.md) | Laravel/Symfony/Slim trade-offs, full-stack pairings, evaluation checklist | 12 min |
+| [Project Structures](software-development/php/PHP_PROJECT_STRUCTURES.md) | Six layouts from flat scripts to DDD, with a decision table | 12 min |
+| [Coding Styles](software-development/php/PHP_CODING_STYLES.md) | PSR-1/4/12, naming, modern PHP 8.2+ defaults, Pint/PHPStan enforcement | 10 min |
+| [Design Patterns (PHP)](software-development/php/PHP_DESIGN_PATTERNS.md) | Idiomatic PHP implementations: DI, factories, decorators, adapters, pattern smells | 15 min |
+| [Frameworks](software-development/php/PHP_FRAMEWORKS.md) | Laravel/Symfony/Slim trade-offs, full-stack pairings, evaluation checklist | 12 min |
 
 ## Related
 

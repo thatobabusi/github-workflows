@@ -5,8 +5,9 @@ All notable changes to this project are documented here. Format follows [Keep a 
 ## [Unreleased]
 
 ### Added
+- [Content Writing](docs/seo/SEO_CONTENT_WRITING.md) — keyword research & intent, one-phrase-per-page, placement map, writing/readability rules, pillar-cluster topical authority, link earning, measurement loop; synthesized from Siteimprove, Orbit Media, Semrush, Bynder, energy.gov, and Michigan Tech best-practice guides
 - **SEO section** (docs/seo/, new sidebar category): [SEO Cheat Sheet](docs/seo/SEO_CHEAT_SHEET.md), [Meta Tags Reference](docs/seo/SEO_META_TAGS.md), [Technical SEO](docs/seo/SEO_TECHNICAL.md)
-- **PHP Architecture section** (docs/architecture/php/, new sidebar category): [Project Structures](docs/architecture/php/PHP_PROJECT_STRUCTURES.md), [Coding Styles](docs/architecture/php/PHP_CODING_STYLES.md), [Design Patterns (PHP)](docs/architecture/php/PHP_DESIGN_PATTERNS.md), [Frameworks](docs/architecture/php/PHP_FRAMEWORKS.md)
+- **PHP Architecture section** (docs/software-development/php/, new sidebar category): [Project Structures](docs/software-development/php/PHP_PROJECT_STRUCTURES.md), [Coding Styles](docs/software-development/php/PHP_CODING_STYLES.md), [Design Patterns (PHP)](docs/software-development/php/PHP_DESIGN_PATTERNS.md), [Frameworks](docs/software-development/php/PHP_FRAMEWORKS.md)
 - Site internal-link resolution now handles subdirectory docs (basename matching in bindInternalLinks)
 - [docs/TESTING.md](docs/TESTING.md) — how to run the e2e suite, coverage map, CI gating, and conventions for new tests; registered in the interactive site (Quality & Gates), docs index, and README
 - Playwright e2e suite (48 tests, ported from laravel-13-cheat-sheet and adapted): header/theming, collapsed-sidebar behavior, navigation, markdown rendering (tables, code labels, TOC, internal links), search, responsive breakpoints, accessibility, scroll-to-top, error handling, full-journey workflows including an all-19-docs sweep. E2E job added to the Pages pipeline as a deploy gate (lint -> e2e -> deploy).
@@ -40,6 +41,8 @@ Standards expansion based on lessons from the laravel-13-cheat-sheet build: lint
 - `CHANGELOG.md`, `package.json`
 
 ### Changed
+- SEO Cheat Sheet upgraded from the same sources: title pattern `Primary — Secondary | Brand`, question-phrased H2s (featured-snippet formula), link-new-from-established rule, PDF/document SEO; Technical SEO gains AI-crawler robots.txt guidance and CTR/timeline monitoring items
+- docs/architecture/ renamed to docs/software-development/
 - README restructured: docs grouped by Core / Quality / Architecture / Operations / Setup; workflow catalog expanded; interactive site documented
 - `.gitignore` expanded (node_modules, env files, OS noise)
 

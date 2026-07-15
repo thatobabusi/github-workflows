@@ -91,6 +91,7 @@ const app = {
                 title: '🔍 SEO',
                 files: [
                     { name: 'SEO Cheat Sheet', file: 'seo/SEO_CHEAT_SHEET.md' },
+                    { name: 'Content Writing', file: 'seo/SEO_CONTENT_WRITING.md' },
                     { name: 'Meta Tags Reference', file: 'seo/SEO_META_TAGS.md' },
                     { name: 'Technical SEO', file: 'seo/SEO_TECHNICAL.md' }
                 ]
@@ -98,10 +99,10 @@ const app = {
             'php': {
                 title: '🐘 PHP Architecture',
                 files: [
-                    { name: 'Project Structures', file: 'architecture/php/PHP_PROJECT_STRUCTURES.md' },
-                    { name: 'Coding Styles', file: 'architecture/php/PHP_CODING_STYLES.md' },
-                    { name: 'Design Patterns (PHP)', file: 'architecture/php/PHP_DESIGN_PATTERNS.md' },
-                    { name: 'Frameworks', file: 'architecture/php/PHP_FRAMEWORKS.md' }
+                    { name: 'Project Structures', file: 'software-development/php/PHP_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'software-development/php/PHP_CODING_STYLES.md' },
+                    { name: 'Design Patterns (PHP)', file: 'software-development/php/PHP_DESIGN_PATTERNS.md' },
+                    { name: 'Frameworks', file: 'software-development/php/PHP_FRAMEWORKS.md' }
                 ]
             }
         };

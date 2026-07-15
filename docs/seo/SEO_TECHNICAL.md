@@ -99,13 +99,29 @@ Mostly a large-site concern (>100k URLs), but good hygiene everywhere:
 - HSTS after HTTPS is stable
 - Don't churn domains; age and history compound
 
+## AI Crawlers
+
+robots.txt now also gates AI visibility — decide deliberately, per bot:
+
+```
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+```
+
+Blocking everything by reflex also removes you from AI answers that cite sources; blocking nothing donates all content to training. Audit which AI user-agents you allow the same way you audit anything else in robots.txt.
+
 ## Monitoring Checklist
 
 - [ ] Search Console: coverage errors, CWV, manual actions — check weekly
+- [ ] Impressions + CTR per page: high impressions with weak CTR → rewrite that title/description
 - [ ] `site:example.com` sanity check — is what's indexed what you expect?
 - [ ] Uptime + 5xx alerting ([Deployment Guide](../DEPLOYMENT_GUIDE.md) health checks)
 - [ ] Log 404s server-side; 301 the ones with inbound links
 - [ ] Lighthouse CI in the pipeline for CWV regressions
+- [ ] Expectation-setting: new content takes **4–6 months** to show impression growth — measure trends, not days ([the optimization loop](SEO_CONTENT_WRITING.md))
 
 ## See Also
 

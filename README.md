@@ -194,32 +194,37 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
     - Per-page on-page checklist and the 60-second audit
     - Headings, URLs, links, images, E-E-A-T signals
 
-22. **[Meta Tags Reference](docs/seo/SEO_META_TAGS.md)** (10 min read)
+22. **[Content Writing](docs/seo/SEO_CONTENT_WRITING.md)** (12 min read)
+    - Keyword research, intent classification, one-phrase-per-page
+    - Placement map, writing rules, pillar-cluster, link earning
+    - Measurement loop and the 4-6 month reality
+
+23. **[Meta Tags Reference](docs/seo/SEO_META_TAGS.md)** (10 min read)
     - Copy-paste head: robots, Open Graph, Twitter cards, JSON-LD
     - Canonicals, hreflang, and the dead tags to stop writing
 
-23. **[Technical SEO](docs/seo/SEO_TECHNICAL.md)** (12 min read)
+24. **[Technical SEO](docs/seo/SEO_TECHNICAL.md)** (12 min read)
     - robots.txt, sitemaps, status codes and redirects
     - Core Web Vitals, JS rendering, crawl budget
 
 ### PHP Architecture
 
-24. **[Project Structures](docs/architecture/php/PHP_PROJECT_STRUCTURES.md)** (12 min read)
+25. **[Project Structures](docs/software-development/php/PHP_PROJECT_STRUCTURES.md)** (12 min read)
     - Six layouts from flat scripts to DDD, with a decision table
 
-25. **[Coding Styles](docs/architecture/php/PHP_CODING_STYLES.md)** (10 min read)
+26. **[Coding Styles](docs/software-development/php/PHP_CODING_STYLES.md)** (10 min read)
     - PSR-1/4/12, naming, modern PHP 8.2+ defaults, enforcement toolchain
 
-26. **[Design Patterns (PHP)](docs/architecture/php/PHP_DESIGN_PATTERNS.md)** (15 min read)
+27. **[Design Patterns (PHP)](docs/software-development/php/PHP_DESIGN_PATTERNS.md)** (15 min read)
     - Idiomatic implementations: DI, factories, decorators, adapters
     - Pattern smells in PHP codebases
 
-27. **[Frameworks](docs/architecture/php/PHP_FRAMEWORKS.md)** (12 min read)
+28. **[Frameworks](docs/software-development/php/PHP_FRAMEWORKS.md)** (12 min read)
     - Laravel/Symfony/Slim trade-offs and full-stack pairings
 
 ### Quick Reference
 
-28. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+29. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
     - Common git commands
     - Commit message examples
     - Release checklist
