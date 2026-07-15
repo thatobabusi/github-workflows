@@ -51,7 +51,8 @@ const app = {
                 files: [
                     { name: 'Code Quality', file: 'CODE_QUALITY.md' },
                     { name: 'Linting Gates', file: 'LINTING_GATES.md' },
-                    { name: 'Quality Gates', file: 'QUALITY_GATES.md' }
+                    { name: 'Quality Gates', file: 'QUALITY_GATES.md' },
+                    { name: 'Testing', file: 'TESTING.md' }
                 ]
             },
             'architecture': {

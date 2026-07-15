@@ -116,76 +116,81 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
    - Branch protection configuration
    - Per-project adoption levels (L0–L3)
 
+8. **[Testing](docs/TESTING.md)** (8 min read)
+   - Running the 48-test Playwright suite (5 browser projects)
+   - Coverage map and the all-docs sweep
+   - CI gating: lint -> e2e -> deploy
+
 ### Architecture
 
-8. **[Design Patterns](docs/DESIGN_PATTERNS.md)** (15 min read)
+9. **[Design Patterns](docs/DESIGN_PATTERNS.md)** (15 min read)
    - Use/don't-use decision table for each pattern
    - Repository, Service, Strategy, Events, Scopes, Value Objects, Pipeline
    - Frontend patterns from the interactive docs sites
 
-9. **[API Standards](docs/API_STANDARDS.md)** (12 min read)
+10. **[API Standards](docs/API_STANDARDS.md)** (12 min read)
    - URL versioning, resource serialization, response envelopes
    - Pagination, filtering, rate limiting, CORS
    - Minimum API test coverage
 
-10. **[Async Patterns](docs/ASYNC_PATTERNS.md)** (12 min read)
+11. **[Async Patterns](docs/ASYNC_PATTERNS.md)** (12 min read)
     - When to queue; job idempotency and failure handling
     - Scheduler and worker operations standards
     - Broadcasting channels and payload rules
 
-11. **[Monorepo Structure](docs/MONOREPO_STRUCTURE.md)** (10 min read)
+12. **[Monorepo Structure](docs/MONOREPO_STRUCTURE.md)** (10 min read)
     - Workspaces, shared configs, path-filtered CI
     - Git submodule two-step workflow
 
 ### Operations
 
-12. **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** (15 min read)
+13. **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** (15 min read)
     - Gated pipelines: lint → test → deploy
     - GitHub Pages lessons, zero-downtime, expand/contract migrations
     - Health checks and rollback procedures
 
-13. **[Security & Performance](docs/SECURITY_PERFORMANCE.md)** (12 min read)
+14. **[Security & Performance](docs/SECURITY_PERFORMANCE.md)** (12 min read)
     - Production security baseline: CSRF/XSS, auth, mass assignment, secrets
     - Performance baseline: N+1 prevention, caching, rate limiting
 
 ### Project Setup Standards
 
-14. **[File Structure](docs/FILE_STRUCTURE.md)** (10 min read)
+15. **[File Structure](docs/FILE_STRUCTURE.md)** (10 min read)
     - PHP/Laravel project layout
     - JavaScript/React project layout
     - TypeScript/Backend structure
     - Naming conventions and .gitignore patterns
 
-15. **[Documentation Standards](docs/DOCUMENTATION_STANDARDS.md)** (12 min read)
+16. **[Documentation Standards](docs/DOCUMENTATION_STANDARDS.md)** (12 min read)
     - Professional README with dynamic headers
     - CHANGELOG.md using "Keep a Changelog" format
     - Contributing guides and security policy
     - Code examples and markdown style
 
-16. **[Implementation Checklist](docs/IMPLEMENTATION_CHECKLIST.md)** (8 min read)
+17. **[Implementation Checklist](docs/IMPLEMENTATION_CHECKLIST.md)** (8 min read)
     - Phase-by-phase adoption path for new projects
     - Minimum viable setup for small projects
 
 ### Tips & Tricks
 
-17. **[Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md)** (12 min read)
+18. **[Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md)** (12 min read)
     - Reflog recovery, bisect, worktrees, rerere, autosquash
     - Precision staging with `add -p`, history archaeology
     - Config quality-of-life and Windows specifics
 
-18. **[Actions Advanced](docs/ACTIONS_ADVANCED.md)** (15 min read)
+19. **[Actions Advanced](docs/ACTIONS_ADVANCED.md)** (15 min read)
     - Reusable workflows and composite actions
     - Caching, dynamic matrices, job outputs, concurrency
     - Security hardening (least-privilege tokens, OIDC, action pinning)
 
-19. **[Nice to Know](docs/NICE_TO_KNOW.md)** (10 min read)
+20. **[Nice to Know](docs/NICE_TO_KNOW.md)** (10 min read)
     - GitHub URL tricks, keyboard shortcuts, markdown extras
     - CODEOWNERS, repo templates, autolinks
     - `gh` CLI power usage and the API escape hatch
 
 ### Quick Reference
 
-20. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+21. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
     - Common git commands
     - Commit message examples
     - Release checklist

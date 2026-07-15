@@ -9,7 +9,7 @@ const CATEGORIES = [
   '💡 Tips & Tricks',
 ];
 
-const TOTAL_DOCS = 19;
+const TOTAL_DOCS = 20;
 
 /** Expand a sidebar section by its title text (sections start collapsed). */
 async function expandSection(page: Page, title: string) {
@@ -455,9 +455,10 @@ test.describe('GitHub Workflows Standards Site - Full Scope', () => {
         const count = await page.locator('#categoryGrid .category-card').count();
         for (let i = 0; i < count; i++) {
           await page.locator('#categoryGrid .category-card').nth(i).click();
-          // Some docs legitimately contain multiple H1s (e.g. heading examples)
+          // Some docs legitimately contain multiple H1s (e.g. heading examples),
+          // and docs may quote error strings — assert on the error ELEMENT, not text
           await expect(page.locator('#fileContent h1').first()).toBeVisible();
-          await expect(page.locator('#fileContent')).not.toContainText('Error loading document');
+          await expect(page.locator('#fileContent .error-box')).toHaveCount(0);
           await page.locator('#fileView .back-button').click();
           await page.locator('#homeGrid .category-card', { hasText: category }).click();
         }

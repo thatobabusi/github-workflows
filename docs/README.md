@@ -20,6 +20,7 @@ The complete standards library. Also browsable as an [interactive reference site
 | [Code Quality](CODE_QUALITY.md) | Five-layer quality stack, full-scope e2e standard, coverage floors, static analysis | 12 min |
 | [Linting Gates](LINTING_GATES.md) | Linting as a deployment gate, per-stack configs, hard-won gotchas | 10 min |
 | [Quality Gates](QUALITY_GATES.md) | Four gates from pre-commit to release, adoption levels L0–L3 | 8 min |
+| [Testing](TESTING.md) | This repo's 48-test Playwright suite: running it, coverage map, CI gating, conventions | 8 min |
 
 ## 🏗️ Architecture
 

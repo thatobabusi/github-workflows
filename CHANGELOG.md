@@ -5,6 +5,7 @@ All notable changes to this project are documented here. Format follows [Keep a 
 ## [Unreleased]
 
 ### Added
+- [docs/TESTING.md](docs/TESTING.md) — how to run the e2e suite, coverage map, CI gating, and conventions for new tests; registered in the interactive site (Quality & Gates), docs index, and README
 - Playwright e2e suite (48 tests, ported from laravel-13-cheat-sheet and adapted): header/theming, collapsed-sidebar behavior, navigation, markdown rendering (tables, code labels, TOC, internal links), search, responsive breakpoints, accessibility, scroll-to-top, error handling, full-journey workflows including an all-19-docs sweep. E2E job added to the Pages pipeline as a deploy gate (lint -> e2e -> deploy).
 - [docs/README.md](docs/README.md) — central index of all standards docs, grouped by category with read times and a suggested reading order
 - **Tips & Tricks** section (new sidebar category): [Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md) (reflog, bisect, worktrees, rerere, autosquash, precision staging), [Actions Advanced](docs/ACTIONS_ADVANCED.md) (reusable workflows, composite actions, caching, dynamic matrices, OIDC hardening, debugging), [Nice to Know](docs/NICE_TO_KNOW.md) (GitHub URL tricks, shortcuts, CODEOWNERS, gh CLI power usage, markdown extras)
