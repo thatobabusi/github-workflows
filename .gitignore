@@ -1,2 +1,19 @@
-.gitignore
+# IDE
 .idea
+.vscode/*
+
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS noise
+.DS_Store
+Thumbs.db

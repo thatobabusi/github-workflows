@@ -62,6 +62,16 @@ Reference the standards and templates when:
 | **Code Review** | PR-based workflow | Required reviews |
 | **Automation** | Full CI/CD | Tests, analysis, releases |
 
+## 🌐 Interactive Reference
+
+The standards are also browsable as an interactive site (same architecture as laravel-13-cheat-sheet): searchable sidebar, dark/light mode, auto-generated table of contents, syntax-highlighted examples, mobile responsive.
+
+```bash
+npm install && npm run dev   # http://localhost:8090
+```
+
+Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated behind the same lint checks this repo prescribes.
+
 ## 📚 Documentation
 
 ### Core Standards (Read First)
@@ -84,28 +94,86 @@ Reference the standards and templates when:
    - CHANGELOG.md format and updates
    - GitHub Release creation with auto-generated notes
 
+4. **[Pull Request Process](docs/PULL_REQUEST_PROCESS.md)** (10 min read)
+   - PR lifecycle, titles, and description requirements
+   - Review standards for authors and reviewers
+   - Merge strategies per target branch and size guidelines
+
+### Quality & Gates
+
+5. **[Code Quality](docs/CODE_QUALITY.md)** (12 min read)
+   - The five-layer quality stack: lint → static analysis → unit → feature → e2e
+   - Full-scope e2e coverage standard (Playwright)
+   - Coverage floors and matrix testing
+
+6. **[Linting Gates](docs/LINTING_GATES.md)** (10 min read)
+   - Linting as a deployment gate — failing checks block deploys
+   - Linter configs per stack with pragmatic rule guidance
+   - Hard-won gotchas: BOM-free JSON, glob quoting, CDN globals
+
+7. **[Quality Gates](docs/QUALITY_GATES.md)** (8 min read)
+   - Four gates: pre-commit → PR merge → deploy → release
+   - Branch protection configuration
+   - Per-project adoption levels (L0–L3)
+
+### Architecture
+
+8. **[Design Patterns](docs/DESIGN_PATTERNS.md)** (15 min read)
+   - Use/don't-use decision table for each pattern
+   - Repository, Service, Strategy, Events, Scopes, Value Objects, Pipeline
+   - Frontend patterns from the interactive docs sites
+
+9. **[API Standards](docs/API_STANDARDS.md)** (12 min read)
+   - URL versioning, resource serialization, response envelopes
+   - Pagination, filtering, rate limiting, CORS
+   - Minimum API test coverage
+
+10. **[Async Patterns](docs/ASYNC_PATTERNS.md)** (12 min read)
+    - When to queue; job idempotency and failure handling
+    - Scheduler and worker operations standards
+    - Broadcasting channels and payload rules
+
+11. **[Monorepo Structure](docs/MONOREPO_STRUCTURE.md)** (10 min read)
+    - Workspaces, shared configs, path-filtered CI
+    - Git submodule two-step workflow
+
+### Operations
+
+12. **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** (15 min read)
+    - Gated pipelines: lint → test → deploy
+    - GitHub Pages lessons, zero-downtime, expand/contract migrations
+    - Health checks and rollback procedures
+
+13. **[Security & Performance](docs/SECURITY_PERFORMANCE.md)** (12 min read)
+    - Production security baseline: CSRF/XSS, auth, mass assignment, secrets
+    - Performance baseline: N+1 prevention, caching, rate limiting
+
 ### Project Setup Standards
 
-4. **[File Structure](docs/FILE_STRUCTURE.md)** (10 min read)
-   - PHP/Laravel project layout
-   - JavaScript/React project layout
-   - TypeScript/Backend structure
-   - Naming conventions and .gitignore patterns
+14. **[File Structure](docs/FILE_STRUCTURE.md)** (10 min read)
+    - PHP/Laravel project layout
+    - JavaScript/React project layout
+    - TypeScript/Backend structure
+    - Naming conventions and .gitignore patterns
 
-5. **[Documentation Standards](docs/DOCUMENTATION_STANDARDS.md)** (12 min read)
-   - Professional README with dynamic headers
-   - CHANGELOG.md using "Keep a Changelog" format
-   - Contributing guides and security policy
-   - Code examples and markdown style
+15. **[Documentation Standards](docs/DOCUMENTATION_STANDARDS.md)** (12 min read)
+    - Professional README with dynamic headers
+    - CHANGELOG.md using "Keep a Changelog" format
+    - Contributing guides and security policy
+    - Code examples and markdown style
+
+16. **[Implementation Checklist](docs/IMPLEMENTATION_CHECKLIST.md)** (8 min read)
+    - Phase-by-phase adoption path for new projects
+    - Minimum viable setup for small projects
 
 ### Quick Reference
 
-6. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
-   - Common git commands
-   - Commit message examples
-   - Release checklist
-   - File structure checklist
-   - Troubleshooting quick fixes
+17. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+    - Common git commands
+    - Commit message examples
+    - Release checklist
+    - File structure checklist
+    - Troubleshooting quick fixes
 
 ## 🔄 Branch Strategy
 
@@ -189,11 +257,17 @@ project/
 
 ### Provided Templates
 
+- **lint-gate.yml** — Linting as a required, merge-blocking status check
 - **tests.yml** — Multi-version testing (PHP/Node versions × Framework versions)
+- **security-scan.yml** — Secret scanning (gitleaks) + dependency audits
+- **deploy-pages.yml** — GitHub Pages deploy gated behind lint checks
+- **deploy.yml** — App deploys: lint → test → deploy pipeline
 - **release.yml** — Automated release tagging and GitHub Release creation
 - **dependabot-auto-merge.yml** — Auto-merge security dependency updates
 - **labeler.yml** — Auto-label PRs based on files changed
 - **static-analysis.yml** — Code quality and style checks
+
+All deploy templates share the **gating pattern**: quality checks are jobs the deploy `needs:` — failing lint or tests blocks the deploy entirely. See [Linting Gates](docs/LINTING_GATES.md) and the [templates README](templates/.github/workflows/README.md).
 
 ### Copy to Your Project
 
@@ -447,8 +521,8 @@ MIT License - Use freely in all projects
 
 ---
 
-**Version:** 1.0.0  
-**Last Updated:** 2026-07-12  
+**Version:** 2.1.0  
+**Last Updated:** 2026-07-15  
 **Maintained by:** Thato Babusi
 
 **Used in:** laravel-lastfm, laravel-installer, laravel-cloudways-deployment, and more

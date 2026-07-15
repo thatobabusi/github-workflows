@@ -1,0 +1,59 @@
+# Security Scan — dependency audit + secret scanning on every PR and weekly.
+# Copy to .github/workflows/. Requires no configuration for most projects.
+
+name: Security Scan
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+    branches: [main, development]
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays 06:00 UTC — catch newly-disclosed CVEs
+  workflow_dispatch:
+
+jobs:
+  secrets:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # gitleaks scans full history
+
+      - name: Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  npm-audit:
+    name: npm Audit
+    runs-on: ubuntu-latest
+    if: ${{ hashFiles('package-lock.json') != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Audit (fail on high+)
+        run: npm audit --audit-level=high
+
+  composer-audit:
+    name: Composer Audit
+    runs-on: ubuntu-latest
+    if: ${{ hashFiles('composer.lock') != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - run: composer install --prefer-dist --no-progress
+
+      - name: Audit dependencies
+        run: composer audit

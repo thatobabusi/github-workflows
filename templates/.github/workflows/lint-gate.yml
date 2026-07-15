@@ -1,0 +1,53 @@
+# Lint Gate — required status check that blocks merge/deploy on lint failure.
+# Copy to .github/workflows/ and adjust the tool steps to your stack.
+# Pair with branch protection: require the "Lint Code" check on main/development.
+
+name: Lint Gate
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+    branches: [main, development]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Keep linters as separate steps — failures pinpoint the layer instantly.
+      - name: Lint HTML
+        run: npm run lint:html
+
+      - name: Lint CSS
+        run: npm run lint:css
+
+      - name: Lint JavaScript
+        run: npm run lint:js
+
+  # Uncomment for PHP projects:
+  # lint-php:
+  #   name: Lint PHP
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: shivammathur/setup-php@v2
+  #       with:
+  #         php-version: '8.4'
+  #         coverage: none
+  #     - run: composer install --prefer-dist --no-progress
+  #     - name: Pint (code style)
+  #       run: vendor/bin/pint --test

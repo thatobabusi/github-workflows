@@ -1,0 +1,68 @@
+# Application Deploy — full pipeline: lint → test → deploy.
+# Copy to .github/workflows/ and fill in the deploy step for your target
+# (SSH, Forge, Vapor, rsync, container registry, ...).
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false   # never kill a mid-flight deploy
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  test:
+    name: Tests
+    needs: lint               # don't burn test minutes on unlint-able code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm test --if-present
+
+  deploy:
+    name: Deploy to Production
+    needs: [lint, test]       # both gates must pass
+    if: success()
+    runs-on: ubuntu-latest
+    environment:
+      name: production        # enables required reviewers + env secrets
+    steps:
+      - uses: actions/checkout@v4
+
+      # --- Replace this block with your deployment mechanism ---
+      - name: Deploy
+        run: |
+          echo "Deploy step — replace with one of:"
+          echo "  - SSH deploy script (appleboy/ssh-action)"
+          echo "  - Laravel Forge deployment trigger (curl webhook)"
+          echo "  - rsync to server"
+          echo "  - docker build & push + service update"
+        # env:
+        #   DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+
+      # --- Post-deploy verification: a deploy isn't done until it's healthy ---
+      - name: Health check
+        run: |
+          sleep 10
+          # curl --fail --silent https://example.com/health || exit 1
+          echo "Health check — point at your /health endpoint"

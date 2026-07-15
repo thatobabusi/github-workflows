@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Workflows — Standards Reference</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css" id="hljs-light">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" id="hljs-dark">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="header-brand" id="brandLink">
+                GitHub Workflows
+            </a>
+            <div class="header-controls">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search standards...">
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout -->
+    <div class="layout">
+        <!-- Left Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div id="sidebarContent"></div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home View -->
+            <div id="homeView" class="view active">
+                <div class="page-title">Standards Reference</div>
+                <p class="page-description">Unified standards for all projects • Branching • Quality gates • CI/CD • Deployment</p>
+                <div class="categories-grid" id="homeGrid"></div>
+            </div>
+
+            <!-- Category View -->
+            <div id="categoryView" class="view">
+                <button class="back-button" id="backFromCategory">← Back</button>
+                <div class="page-title" id="categoryTitle"></div>
+                <div class="categories-grid" id="categoryGrid"></div>
+            </div>
+
+            <!-- File View -->
+            <div id="fileView" class="view">
+                <button class="back-button" id="backFromFile">← Back</button>
+                <div class="content" id="fileContent"></div>
+            </div>
+
+            <!-- Search View -->
+            <div id="searchView" class="view">
+                <button class="back-button" id="backFromSearch">← Back</button>
+                <div class="page-title">Search Results</div>
+                <div class="categories-grid" id="searchResults"></div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyView" class="view">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📝</div>
+                    <p>No results found. Try a different search.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar - TOC -->
+        <aside class="toc-sidebar" id="tocSidebar">
+            <div class="toc-title">On this page</div>
+            <ul class="toc-list" id="tocList"></ul>
+        </aside>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Scroll to top" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="assets/scripts.js"></script>
+</body>
+</html>

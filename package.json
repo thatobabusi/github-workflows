@@ -1,0 +1,31 @@
+{
+  "name": "github-workflows",
+  "version": "2.1.0",
+  "description": "Unified standards, workflow templates, and interactive reference for all thatobabusi projects",
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "htmlhint index.html",
+    "lint:css": "stylelint assets/**/*.css",
+    "lint:js": "eslint assets/scripts.js",
+    "dev": "python -m http.server 8090"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "keywords": [
+    "standards",
+    "workflows",
+    "ci-cd",
+    "github-actions",
+    "templates"
+  ],
+  "author": "Thato Babusi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thatobabusi/github-workflows.git"
+  }
+}
