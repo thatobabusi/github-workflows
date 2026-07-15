@@ -4,6 +4,11 @@ All notable changes to this project are documented here. Format follows [Keep a 
 
 ## [Unreleased]
 
+## [2.1.1] - 2026-07-15
+
+### Changed
+- All GitHub Actions bumped to Node 24 majors (cache v6, checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, gitleaks v3, gh-release v3); pinned Node 20 -> 22. Applied to repo workflows and copyable templates.
+
 ## [2.1.0] - 2026-07-15
 
 Standards expansion based on lessons from the laravel-13-cheat-sheet build: linting gates, interactive docs site, and eleven new standards documents.

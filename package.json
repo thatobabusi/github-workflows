@@ -1,6 +1,6 @@
 {
   "name": "github-workflows",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Unified standards, workflow templates, and interactive reference for all thatobabusi projects",
   "scripts": {
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
