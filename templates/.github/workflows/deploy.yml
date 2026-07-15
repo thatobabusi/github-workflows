@@ -18,10 +18,10 @@ jobs:
     name: Lint Code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
       - run: npm ci
       - run: npm run lint
@@ -31,10 +31,10 @@ jobs:
     needs: lint               # don't burn test minutes on unlint-able code
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
       - run: npm ci
       - run: npm test --if-present
@@ -47,7 +47,7 @@ jobs:
     environment:
       name: production        # enables required reviewers + env secrets
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # --- Replace this block with your deployment mechanism ---
       - name: Deploy
