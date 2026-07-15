@@ -77,6 +77,14 @@ const app = {
                     { name: 'Documentation Standards', file: 'DOCUMENTATION_STANDARDS.md' },
                     { name: 'Implementation Checklist', file: 'IMPLEMENTATION_CHECKLIST.md' }
                 ]
+            },
+            'tips': {
+                title: '💡 Tips & Tricks',
+                files: [
+                    { name: 'Git Tips & Tricks', file: 'GIT_TIPS_TRICKS.md' },
+                    { name: 'Actions Advanced', file: 'ACTIONS_ADVANCED.md' },
+                    { name: 'Nice to Know', file: 'NICE_TO_KNOW.md' }
+                ]
             }
         };
 

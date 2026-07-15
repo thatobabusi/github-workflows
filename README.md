@@ -166,9 +166,26 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
     - Phase-by-phase adoption path for new projects
     - Minimum viable setup for small projects
 
+### Tips & Tricks
+
+17. **[Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md)** (12 min read)
+    - Reflog recovery, bisect, worktrees, rerere, autosquash
+    - Precision staging with `add -p`, history archaeology
+    - Config quality-of-life and Windows specifics
+
+18. **[Actions Advanced](docs/ACTIONS_ADVANCED.md)** (15 min read)
+    - Reusable workflows and composite actions
+    - Caching, dynamic matrices, job outputs, concurrency
+    - Security hardening (least-privilege tokens, OIDC, action pinning)
+
+19. **[Nice to Know](docs/NICE_TO_KNOW.md)** (10 min read)
+    - GitHub URL tricks, keyboard shortcuts, markdown extras
+    - CODEOWNERS, repo templates, autolinks
+    - `gh` CLI power usage and the API escape hatch
+
 ### Quick Reference
 
-17. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+20. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
     - Common git commands
     - Commit message examples
     - Release checklist
