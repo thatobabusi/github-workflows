@@ -67,36 +67,71 @@ The complete standards library. Also browsable as an [interactive reference site
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
-| [Project Structures](software-development/php/PHP_PROJECT_STRUCTURES.md) | Six layouts from flat scripts to DDD, with a decision table | 12 min |
-| [Coding Styles](software-development/php/PHP_CODING_STYLES.md) | PSR-1/4/12, naming, modern PHP 8.2+ defaults, Pint/PHPStan enforcement | 10 min |
-| [Design Patterns (PHP)](software-development/php/PHP_DESIGN_PATTERNS.md) | Idiomatic PHP implementations: DI, factories, decorators, adapters, pattern smells | 15 min |
-| [Frameworks](software-development/php/PHP_FRAMEWORKS.md) | Laravel/Symfony/Slim trade-offs, full-stack pairings, evaluation checklist | 12 min |
+| [Project Structures](software-development/backend/php/PHP_PROJECT_STRUCTURES.md) | Six layouts from flat scripts to DDD, with a decision table | 12 min |
+| [Coding Styles](software-development/backend/php/PHP_CODING_STYLES.md) | PSR-1/4/12, naming, modern PHP 8.2+ defaults, Pint/PHPStan enforcement | 10 min |
+| [Design Patterns (PHP)](software-development/backend/php/PHP_DESIGN_PATTERNS.md) | Idiomatic PHP implementations: DI, factories, decorators, adapters, pattern smells | 15 min |
+| [Frameworks](software-development/backend/php/PHP_FRAMEWORKS.md) | Laravel/Symfony/Slim trade-offs, full-stack pairings, evaluation checklist | 12 min |
+| [Laravel Essentials](software-development/backend/php/laravel/LARAVEL_ESSENTIALS.md) | Artisan workflow, where logic lives, Eloquent conventions, ecosystem map, deploy notes | 12 min |
+| [Symfony Essentials](software-development/backend/php/symfony/SYMFONY_ESSENTIALS.md) | Attributes routing, autowiring, Doctrine Data Mapper, Messenger, LTS discipline | 12 min |
+| [Vanilla PHP Essentials](software-development/backend/php/vanilla/VANILLA_PHP_ESSENTIALS.md) | Front controller, FastRoute, PDO done right, the security checklist you own | 10 min |
+| [WordPress Essentials](software-development/backend/php/wordpress/WORDPRESS_ESSENTIALS.md) | Hooks mental model, plugin structure, security non-negotiables, WP-CLI, Bedrock | 12 min |
+| [Composer Cheat Sheet](software-development/composer/COMPOSER_CHEAT_SHEET.md) | Commands, version constraints, autoloading, deploy flags, path repos, publishing | 10 min |
 
 ## 🐍 Python
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
-| [Project Structures](software-development/python/PYTHON_PROJECT_STRUCTURES.md) | src layout, FastAPI/Django/data layouts, pyproject rules | 10 min |
-| [Coding Styles](software-development/python/PYTHON_CODING_STYLES.md) | PEP 8, typing, modern 3.11+ idioms, ruff/mypy/uv toolchain | 10 min |
-| [Frameworks](software-development/python/PYTHON_FRAMEWORKS.md) | FastAPI/Django/Flask trade-offs, background work, pairings | 10 min |
+| [Project Structures](software-development/backend/python/PYTHON_PROJECT_STRUCTURES.md) | src layout, FastAPI/Django/data layouts, pyproject rules | 10 min |
+| [Coding Styles](software-development/backend/python/PYTHON_CODING_STYLES.md) | PEP 8, typing, modern 3.11+ idioms, ruff/mypy/uv toolchain | 10 min |
+| [Frameworks](software-development/backend/python/PYTHON_FRAMEWORKS.md) | FastAPI/Django/Flask trade-offs, background work, pairings | 10 min |
+| [Django Essentials](software-development/backend/python/django/DJANGO_ESSENTIALS.md) | Where logic lives, ORM performance, the admin, DRF, settings discipline | 12 min |
+| [Flask Essentials](software-development/backend/python/flask/FLASK_ESSENTIALS.md) | App factory + blueprints, error handlers, context gotchas, gunicorn | 10 min |
 
 ## ☕ Java
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
-| [Project Structures](software-development/java/JAVA_PROJECT_STRUCTURES.md) | Maven/Gradle layout, package-by-feature, multi-module, hexagonal, modern Java | 12 min |
-| [Spring Boot Essentials](software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md) | Starters, core pattern, config, slice testing, the traps | 12 min |
-| [Quarkus Essentials](software-development/java/quarkus/QUARKUS_ESSENTIALS.md) | Build-time wiring, dev mode, Panache, native images, vs Spring | 12 min |
+| [Project Structures](software-development/backend/java/JAVA_PROJECT_STRUCTURES.md) | Maven/Gradle layout, package-by-feature, multi-module, hexagonal, modern Java | 12 min |
+| [Coding Styles](software-development/backend/java/JAVA_CODING_STYLES.md) | Google style baseline, records/sealed idioms, null discipline, Spotless/ArchUnit | 10 min |
+| [Spring Boot Essentials](software-development/backend/java/springboot/SPRINGBOOT_ESSENTIALS.md) | Starters, core pattern, config, slice testing, the traps | 12 min |
+| [Quarkus Essentials](software-development/backend/java/quarkus/QUARKUS_ESSENTIALS.md) | Build-time wiring, dev mode, Panache, native images, vs Spring | 12 min |
+| [Vaadin Essentials](software-development/backend/java/vaadin/VAADIN_ESSENTIALS.md) | Pure-Java UIs, grids/binders, lazy data providers, Flow vs Hilla | 10 min |
 
 ## ⚙️ Dev Environment
 
 | Doc | What It Covers | Read Time |
 |-----|----------------|-----------|
 | [Database Design](software-development/db/DATABASE_DESIGN.md) | Schema rules, normalization judgment, indexing, migration discipline | 12 min |
-| [SQL Cheat Sheet](software-development/db/SQL_CHEAT_SHEET.md) | Joins, window functions, CTEs, upserts, EXPLAIN reading | 12 min |
+| [SQL Cheat Sheet](software-development/db/sql/SQL_CHEAT_SHEET.md) | Joins, window functions, CTEs, upserts, EXPLAIN reading | 12 min |
+| [MySQL Essentials](software-development/db/mysql/MYSQL_ESSENTIALS.md) | InnoDB config, utf8mb4, upserts, EXPLAIN types, locking gotchas | 10 min |
+| [MariaDB Essentials](software-development/db/mariadb/MARIADB_ESSENTIALS.md) | Compatibility reality, the collation trap, system-versioned tables | 10 min |
+| [MongoDB Essentials](software-development/db/mongodb/MONGODB_ESSENTIALS.md) | Embed vs reference, aggregation, indexing, schema discipline | 12 min |
+| [SQL Server Essentials](software-development/db/sqlserver/SQLSERVER_ESSENTIALS.md) | T-SQL dialect, clustered indexes, RCSI locking, ops kit | 12 min |
 | [Docker Cheat Sheet](software-development/docker/DOCKER_CHEAT_SHEET.md) | Daily commands, Dockerfile rules, Compose, image scanning in CI | 10 min |
 | [CLI Cheat Sheet](software-development/cli/CLI_CHEAT_SHEET.md) | Modern tool replacements, text surgery, safe scripting, one-liners | 10 min |
 | [Azure Essentials](software-development/azure/AZURE_ESSENTIALS.md) | Service map, az CLI, App Service/Container Apps, OIDC deploys, cost sanity | 12 min |
+
+## 🟩 Node
+
+| Doc | What It Covers | Read Time |
+|-----|----------------|-----------|
+| [Node Essentials](software-development/backend/node/NODE_ESSENTIALS.md) | Project setup, event-loop rules, Fastify/Nest landscape, config validation, production rules | 12 min |
+| [Express Essentials](software-development/backend/expressjs/EXPRESS_ESSENTIALS.md) | Middleware model, async error trap, production stack, 4 vs 5 | 10 min |
+| [NestJS Essentials](software-development/frontend/javascript/nestjs/NESTJS_ESSENTIALS.md) | Modules/DI, request pipeline, validation, honest positioning | 12 min |
+
+## 🎨 Frontend
+
+| Doc | What It Covers | Read Time |
+|-----|----------------|-----------|
+| [React Essentials](software-development/frontend/javascript/react/REACT_ESSENTIALS.md) | Component rules, the state ladder, hooks discipline, forms, performance | 12 min |
+| [Vue Essentials](software-development/frontend/javascript/vuejs/VUE_ESSENTIALS.md) | Composition API, reactivity rules, composables, Pinia | 10 min |
+| [Angular Essentials](software-development/frontend/javascript/angularjs/ANGULAR_ESSENTIALS.md) | Standalone components, signals, DI, RxJS restraint, typed forms | 12 min |
+| [Next.js Essentials](software-development/frontend/javascript/nextjs/NEXTJS_ESSENTIALS.md) | App Router, server/client split, caching, Server Actions, SEO wiring | 12 min |
+| [Bootstrap Essentials](software-development/frontend/bootstrap/BOOTSTRAP_ESSENTIALS.md) | Grid, utilities, components, dark mode, vs Tailwind | 10 min |
+| [Nuxt Essentials](software-development/frontend/javascript/nuxt/NUXT_ESSENTIALS.md) | useFetch rule, Nitro routes, routeRules rendering, SEO wiring | 12 min |
+| [HTML Cheat Sheet](software-development/frontend/html/HTML_CHEAT_SHEET.md) | Semantic layout, forms, images, accessibility baseline | 12 min |
+| [AJAX & Fetch Cheat Sheet](software-development/frontend/ajax/AJAX_FETCH_CHEAT_SHEET.md) | fetch patterns, response.ok trap, aborts, uploads, SSE map | 10 min |
+| [jQuery Essentials](software-development/frontend/jquery/JQUERY_ESSENTIALS.md) | Legacy maintenance, delegation, the vanilla migration table | 10 min |
 
 ## Related
 

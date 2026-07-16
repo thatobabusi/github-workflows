@@ -12,9 +12,11 @@ const CATEGORIES = [
   '🐍 Python',
   '☕ Java',
   '⚙️ Dev Environment',
+  '🟩 Node',
+  '🎨 Frontend',
 ];
 
-const TOTAL_DOCS = 39;
+const TOTAL_DOCS = 64;
 
 /** Expand a sidebar section by its title text (sections start collapsed). */
 async function expandSection(page: Page, title: string) {
@@ -448,6 +450,7 @@ test.describe('GitHub Workflows Standards Site - Full Scope', () => {
     });
 
     test('should open every doc in every category without errors', async ({ page }) => {
+      test.setTimeout(180_000);   // the sweep grows with the doc count (64 docs)
       const jsErrors: string[] = [];
       page.on('pageerror', error => {
         jsErrors.push(error.message);

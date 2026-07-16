@@ -7,7 +7,7 @@ The services that matter for web workloads, the az CLI survival kit, and deploym
 | Need | Service | Notes |
 |------|---------|-------|
 | Host a web app / API (default) | **App Service** | PaaS; PHP/Node/Python/Java built in; deploy slots |
-| Run containers without orchestration | **Container Apps** | Scale-to-zero, per-second billing — pairs with [Quarkus native](../java/quarkus/QUARKUS_ESSENTIALS.md) |
+| Run containers without orchestration | **Container Apps** | Scale-to-zero, per-second billing — pairs with [Quarkus native](../backend/java/quarkus/QUARKUS_ESSENTIALS.md) |
 | Full Kubernetes | AKS | Only when you truly need K8s (you often don't) |
 | Functions / event glue | Azure Functions | Timers, queue triggers, webhooks |
 | MySQL / Postgres | Azure Database (Flexible Server) | Managed backups, HA option |

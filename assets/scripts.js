@@ -99,36 +99,71 @@ const app = {
             'php': {
                 title: '🐘 PHP',
                 files: [
-                    { name: 'Project Structures', file: 'software-development/php/PHP_PROJECT_STRUCTURES.md' },
-                    { name: 'Coding Styles', file: 'software-development/php/PHP_CODING_STYLES.md' },
-                    { name: 'Design Patterns (PHP)', file: 'software-development/php/PHP_DESIGN_PATTERNS.md' },
-                    { name: 'Frameworks', file: 'software-development/php/PHP_FRAMEWORKS.md' }
+                    { name: 'Project Structures', file: 'software-development/backend/php/PHP_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'software-development/backend/php/PHP_CODING_STYLES.md' },
+                    { name: 'Design Patterns (PHP)', file: 'software-development/backend/php/PHP_DESIGN_PATTERNS.md' },
+                    { name: 'Frameworks', file: 'software-development/backend/php/PHP_FRAMEWORKS.md' },
+                    { name: 'Composer Cheat Sheet', file: 'software-development/composer/COMPOSER_CHEAT_SHEET.md' },
+                    { name: 'Laravel Essentials', file: 'software-development/backend/php/laravel/LARAVEL_ESSENTIALS.md' },
+                    { name: 'Symfony Essentials', file: 'software-development/backend/php/symfony/SYMFONY_ESSENTIALS.md' },
+                    { name: 'Vanilla PHP Essentials', file: 'software-development/backend/php/vanilla/VANILLA_PHP_ESSENTIALS.md' },
+                    { name: 'WordPress Essentials', file: 'software-development/backend/php/wordpress/WORDPRESS_ESSENTIALS.md' }
                 ]
             },
             'python': {
                 title: '🐍 Python',
                 files: [
-                    { name: 'Project Structures', file: 'software-development/python/PYTHON_PROJECT_STRUCTURES.md' },
-                    { name: 'Coding Styles', file: 'software-development/python/PYTHON_CODING_STYLES.md' },
-                    { name: 'Frameworks', file: 'software-development/python/PYTHON_FRAMEWORKS.md' }
+                    { name: 'Project Structures', file: 'software-development/backend/python/PYTHON_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'software-development/backend/python/PYTHON_CODING_STYLES.md' },
+                    { name: 'Frameworks', file: 'software-development/backend/python/PYTHON_FRAMEWORKS.md' },
+                    { name: 'Django Essentials', file: 'software-development/backend/python/django/DJANGO_ESSENTIALS.md' },
+                    { name: 'Flask Essentials', file: 'software-development/backend/python/flask/FLASK_ESSENTIALS.md' }
                 ]
             },
             'java': {
                 title: '☕ Java',
                 files: [
-                    { name: 'Project Structures', file: 'software-development/java/JAVA_PROJECT_STRUCTURES.md' },
-                    { name: 'Spring Boot Essentials', file: 'software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md' },
-                    { name: 'Quarkus Essentials', file: 'software-development/java/quarkus/QUARKUS_ESSENTIALS.md' }
+                    { name: 'Project Structures', file: 'software-development/backend/java/JAVA_PROJECT_STRUCTURES.md' },
+                    { name: 'Coding Styles', file: 'software-development/backend/java/JAVA_CODING_STYLES.md' },
+                    { name: 'Spring Boot Essentials', file: 'software-development/backend/java/springboot/SPRINGBOOT_ESSENTIALS.md' },
+                    { name: 'Quarkus Essentials', file: 'software-development/backend/java/quarkus/QUARKUS_ESSENTIALS.md' },
+                    { name: 'Vaadin Essentials', file: 'software-development/backend/java/vaadin/VAADIN_ESSENTIALS.md' }
                 ]
             },
             'devenv': {
                 title: '⚙️ Dev Environment',
                 files: [
                     { name: 'Database Design', file: 'software-development/db/DATABASE_DESIGN.md' },
-                    { name: 'SQL Cheat Sheet', file: 'software-development/db/SQL_CHEAT_SHEET.md' },
+                    { name: 'SQL Cheat Sheet', file: 'software-development/db/sql/SQL_CHEAT_SHEET.md' },
+                    { name: 'MySQL Essentials', file: 'software-development/db/mysql/MYSQL_ESSENTIALS.md' },
+                    { name: 'MariaDB Essentials', file: 'software-development/db/mariadb/MARIADB_ESSENTIALS.md' },
+                    { name: 'MongoDB Essentials', file: 'software-development/db/mongodb/MONGODB_ESSENTIALS.md' },
+                    { name: 'SQL Server Essentials', file: 'software-development/db/sqlserver/SQLSERVER_ESSENTIALS.md' },
                     { name: 'Docker Cheat Sheet', file: 'software-development/docker/DOCKER_CHEAT_SHEET.md' },
                     { name: 'CLI Cheat Sheet', file: 'software-development/cli/CLI_CHEAT_SHEET.md' },
                     { name: 'Azure Essentials', file: 'software-development/azure/AZURE_ESSENTIALS.md' }
+                ]
+            },
+            'node': {
+                title: '🟩 Node',
+                files: [
+                    { name: 'Node Essentials', file: 'software-development/backend/node/NODE_ESSENTIALS.md' },
+                    { name: 'Express Essentials', file: 'software-development/backend/expressjs/EXPRESS_ESSENTIALS.md' },
+                    { name: 'NestJS Essentials', file: 'software-development/frontend/javascript/nestjs/NESTJS_ESSENTIALS.md' }
+                ]
+            },
+            'frontend': {
+                title: '🎨 Frontend',
+                files: [
+                    { name: 'React Essentials', file: 'software-development/frontend/javascript/react/REACT_ESSENTIALS.md' },
+                    { name: 'Vue Essentials', file: 'software-development/frontend/javascript/vuejs/VUE_ESSENTIALS.md' },
+                    { name: 'Angular Essentials', file: 'software-development/frontend/javascript/angularjs/ANGULAR_ESSENTIALS.md' },
+                    { name: 'Next.js Essentials', file: 'software-development/frontend/javascript/nextjs/NEXTJS_ESSENTIALS.md' },
+                    { name: 'Bootstrap Essentials', file: 'software-development/frontend/bootstrap/BOOTSTRAP_ESSENTIALS.md' },
+                    { name: 'Nuxt Essentials', file: 'software-development/frontend/javascript/nuxt/NUXT_ESSENTIALS.md' },
+                    { name: 'HTML Cheat Sheet', file: 'software-development/frontend/html/HTML_CHEAT_SHEET.md' },
+                    { name: 'AJAX & Fetch', file: 'software-development/frontend/ajax/AJAX_FETCH_CHEAT_SHEET.md' },
+                    { name: 'jQuery Essentials', file: 'software-development/frontend/jquery/JQUERY_ESSENTIALS.md' }
                 ]
             }
         };

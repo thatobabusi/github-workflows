@@ -3,7 +3,8 @@
   "version": "2.1.1",
   "description": "Unified standards, workflow templates, and interactive reference for all thatobabusi projects",
   "scripts": {
-    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js && npm run lint:links",
+    "lint:links": "node scripts/check-links.mjs",
     "lint:html": "htmlhint index.html",
     "lint:css": "stylelint assets/**/*.css",
     "lint:js": "eslint assets/scripts.js",

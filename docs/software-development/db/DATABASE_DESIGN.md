@@ -10,7 +10,7 @@ Schema design rules, normalization judgment, indexing, and migration discipline 
 | Every table gets `id` (bigint auto / identity) + `created_at` / `updated_at` | Uniform tooling, debuggability |
 | Foreign keys are real constraints, not conventions | The database is the last line of integrity |
 | `NOT NULL` by default; nullable is an explicit decision | Nulls are where bugs live |
-| Money = integer cents; never FLOAT/DOUBLE for anything financial | [Same rule as code](../php/PHP_DESIGN_PATTERNS.md) |
+| Money = integer cents; never FLOAT/DOUBLE for anything financial | [Same rule as code](../backend/php/PHP_DESIGN_PATTERNS.md) |
 | Timestamps in UTC (`timestamptz` in Postgres) | Timezones are presentation |
 | Enums: lookup table or CHECK constraint over engine ENUM | Engine enums make migrations painful |
 
@@ -65,7 +65,7 @@ EXPLAIN ANALYZE SELECT ...;   -- Seq Scan on a big table in a hot path = missing
 
 ## Migration Discipline
 
-All schema change flows through versioned migrations ([Laravel](../php/PHP_FRAMEWORKS.md) migrations, Alembic, Flyway):
+All schema change flows through versioned migrations ([Laravel](../backend/php/PHP_FRAMEWORKS.md) migrations, Alembic, Flyway):
 
 - One concern per migration; irreversible ones documented as such
 - **Expand → migrate → contract** for breaking changes — full procedure in the [Deployment Guide](../../DEPLOYMENT_GUIDE.md)
@@ -95,6 +95,6 @@ Both are correct defaults; consistency within an ecosystem beats micro-optimizat
 
 ## See Also
 
-- [SQL Cheat Sheet](SQL_CHEAT_SHEET.md)
+- [SQL Cheat Sheet](sql/SQL_CHEAT_SHEET.md)
 - [Deployment Guide](../../DEPLOYMENT_GUIDE.md) — migrations in production
 - [Security & Performance](../../SECURITY_PERFORMANCE.md)

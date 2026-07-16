@@ -209,61 +209,140 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
 
 ### PHP
 
-25. **[Project Structures](docs/software-development/php/PHP_PROJECT_STRUCTURES.md)** (12 min read)
+25. **[Project Structures](docs/software-development/backend/php/PHP_PROJECT_STRUCTURES.md)** (12 min read)
     - Six layouts from flat scripts to DDD, with a decision table
 
-26. **[Coding Styles](docs/software-development/php/PHP_CODING_STYLES.md)** (10 min read)
+26. **[Coding Styles](docs/software-development/backend/php/PHP_CODING_STYLES.md)** (10 min read)
     - PSR-1/4/12, naming, modern PHP 8.2+ defaults, enforcement toolchain
 
-27. **[Design Patterns (PHP)](docs/software-development/php/PHP_DESIGN_PATTERNS.md)** (15 min read)
+27. **[Design Patterns (PHP)](docs/software-development/backend/php/PHP_DESIGN_PATTERNS.md)** (15 min read)
     - Idiomatic implementations: DI, factories, decorators, adapters
     - Pattern smells in PHP codebases
 
-28. **[Frameworks](docs/software-development/php/PHP_FRAMEWORKS.md)** (12 min read)
+28. **[Frameworks](docs/software-development/backend/php/PHP_FRAMEWORKS.md)** (12 min read)
     - Laravel/Symfony/Slim trade-offs and full-stack pairings
+
+29. **[Composer Cheat Sheet](docs/software-development/composer/COMPOSER_CHEAT_SHEET.md)** (10 min read)
+    - Commands, version constraints, autoloading, deploy flags, publishing
+
+30. **[Laravel Essentials](docs/software-development/backend/php/laravel/LARAVEL_ESSENTIALS.md)** (12 min read)
+    - Artisan workflow, where logic lives, Eloquent conventions, ecosystem map
+
+31. **[Symfony Essentials](docs/software-development/backend/php/symfony/SYMFONY_ESSENTIALS.md)** (12 min read)
+    - Attributes routing, autowiring, Doctrine Data Mapper, Messenger, LTS
+
+32. **[Vanilla PHP Essentials](docs/software-development/backend/php/vanilla/VANILLA_PHP_ESSENTIALS.md)** (10 min read)
+    - Front controller, PDO done right, the security checklist you own
+
+33. **[WordPress Essentials](docs/software-development/backend/php/wordpress/WORDPRESS_ESSENTIALS.md)** (12 min read)
+    - Hooks mental model, plugin structure, security, WP-CLI, Bedrock
 
 ### Python
 
-29. **[Project Structures](docs/software-development/python/PYTHON_PROJECT_STRUCTURES.md)** (10 min read)
+34. **[Project Structures](docs/software-development/backend/python/PYTHON_PROJECT_STRUCTURES.md)** (10 min read)
     - src layout, FastAPI/Django/data-science layouts, pyproject rules
 
-30. **[Coding Styles](docs/software-development/python/PYTHON_CODING_STYLES.md)** (10 min read)
+35. **[Coding Styles](docs/software-development/backend/python/PYTHON_CODING_STYLES.md)** (10 min read)
     - PEP 8, typing, modern 3.11+ idioms, ruff/mypy/uv toolchain
 
-31. **[Frameworks](docs/software-development/python/PYTHON_FRAMEWORKS.md)** (10 min read)
+36. **[Frameworks](docs/software-development/backend/python/PYTHON_FRAMEWORKS.md)** (10 min read)
     - FastAPI/Django/Flask trade-offs, background work, HTMX pairing
+
+37. **[Django Essentials](docs/software-development/backend/python/django/DJANGO_ESSENTIALS.md)** (12 min read)
+    - Where logic lives, ORM performance rules, the admin, DRF, settings discipline
+
+38. **[Flask Essentials](docs/software-development/backend/python/flask/FLASK_ESSENTIALS.md)** (10 min read)
+    - App factory + blueprints, error handlers, context gotchas, gunicorn
 
 ### Java
 
-32. **[Project Structures](docs/software-development/java/JAVA_PROJECT_STRUCTURES.md)** (12 min read)
+39. **[Project Structures](docs/software-development/backend/java/JAVA_PROJECT_STRUCTURES.md)** (12 min read)
     - Maven/Gradle layout, package-by-feature, multi-module, hexagonal
 
-33. **[Spring Boot Essentials](docs/software-development/java/springboot/SPRINGBOOT_ESSENTIALS.md)** (12 min read)
+40. **[Coding Styles](docs/software-development/backend/java/JAVA_CODING_STYLES.md)** (10 min read)
+    - Google style baseline, records/sealed/pattern-matching idioms, Spotless/ArchUnit
+
+41. **[Spring Boot Essentials](docs/software-development/backend/java/springboot/SPRINGBOOT_ESSENTIALS.md)** (12 min read)
     - Starters, thin-controller pattern, config, slice testing, the traps
 
-34. **[Quarkus Essentials](docs/software-development/java/quarkus/QUARKUS_ESSENTIALS.md)** (12 min read)
+42. **[Quarkus Essentials](docs/software-development/backend/java/quarkus/QUARKUS_ESSENTIALS.md)** (12 min read)
     - Build-time wiring, dev mode, Panache, native images, vs Spring Boot
+
+43. **[Vaadin Essentials](docs/software-development/backend/java/vaadin/VAADIN_ESSENTIALS.md)** (10 min read)
+    - Pure-Java UIs, grids and binders, lazy data providers, Flow vs Hilla
 
 ### Dev Environment
 
-35. **[Database Design](docs/software-development/db/DATABASE_DESIGN.md)** (12 min read)
+44. **[Database Design](docs/software-development/db/DATABASE_DESIGN.md)** (12 min read)
     - Schema rules, normalization judgment, indexing, migration discipline
 
-36. **[SQL Cheat Sheet](docs/software-development/db/SQL_CHEAT_SHEET.md)** (12 min read)
+45. **[SQL Cheat Sheet](docs/software-development/db/sql/SQL_CHEAT_SHEET.md)** (12 min read)
     - Joins, window functions, CTEs, upserts, reading EXPLAIN
 
-37. **[Docker Cheat Sheet](docs/software-development/docker/DOCKER_CHEAT_SHEET.md)** (10 min read)
+46. **[MySQL Essentials](docs/software-development/db/mysql/MYSQL_ESSENTIALS.md)** (10 min read)
+    - InnoDB config, utf8mb4, upserts, EXPLAIN types, locking gotchas
+
+47. **[MariaDB Essentials](docs/software-development/db/mariadb/MARIADB_ESSENTIALS.md)** (10 min read)
+    - MySQL compatibility reality, the collation trap, system-versioned tables
+
+48. **[MongoDB Essentials](docs/software-development/db/mongodb/MONGODB_ESSENTIALS.md)** (12 min read)
+    - Embed vs reference, aggregation pipeline, indexing, schema discipline
+
+49. **[SQL Server Essentials](docs/software-development/db/sqlserver/SQLSERVER_ESSENTIALS.md)** (12 min read)
+    - T-SQL dialect, clustered indexes, RCSI locking, ops survival kit
+
+50. **[Docker Cheat Sheet](docs/software-development/docker/DOCKER_CHEAT_SHEET.md)** (10 min read)
     - Daily commands, Dockerfile best practices, Compose, CI image scanning
 
-38. **[CLI Cheat Sheet](docs/software-development/cli/CLI_CHEAT_SHEET.md)** (10 min read)
+51. **[CLI Cheat Sheet](docs/software-development/cli/CLI_CHEAT_SHEET.md)** (10 min read)
     - Modern tool replacements (rg/fd/bat), text surgery, safe scripting
 
-39. **[Azure Essentials](docs/software-development/azure/AZURE_ESSENTIALS.md)** (12 min read)
+52. **[Azure Essentials](docs/software-development/azure/AZURE_ESSENTIALS.md)** (12 min read)
     - Service map, az CLI, App Service/Container Apps, OIDC deploys
+
+### Node
+
+53. **[Node Essentials](docs/software-development/backend/node/NODE_ESSENTIALS.md)** (12 min read)
+    - Project setup, event-loop rules, Fastify/Nest landscape, production rules
+
+54. **[Express Essentials](docs/software-development/backend/expressjs/EXPRESS_ESSENTIALS.md)** (10 min read)
+    - Middleware model, the async error trap, production stack, Express 4 vs 5
+
+55. **[NestJS Essentials](docs/software-development/frontend/javascript/nestjs/NESTJS_ESSENTIALS.md)** (12 min read)
+    - Modules/DI, the request pipeline, validation, honest positioning
+
+### Frontend
+
+56. **[React Essentials](docs/software-development/frontend/javascript/react/REACT_ESSENTIALS.md)** (12 min read)
+    - Component rules, the state ladder, hooks discipline, forms, performance
+
+57. **[Vue Essentials](docs/software-development/frontend/javascript/vuejs/VUE_ESSENTIALS.md)** (10 min read)
+    - Composition API, reactivity rules, composables, Pinia
+
+58. **[Angular Essentials](docs/software-development/frontend/javascript/angularjs/ANGULAR_ESSENTIALS.md)** (12 min read)
+    - Standalone components, signals, DI, RxJS restraint, typed forms
+
+59. **[Next.js Essentials](docs/software-development/frontend/javascript/nextjs/NEXTJS_ESSENTIALS.md)** (12 min read)
+    - App Router, server/client split, caching, Server Actions, SEO wiring
+
+60. **[Bootstrap Essentials](docs/software-development/frontend/bootstrap/BOOTSTRAP_ESSENTIALS.md)** (10 min read)
+    - Grid, utilities, components, dark mode, vs Tailwind
+
+61. **[Nuxt Essentials](docs/software-development/frontend/javascript/nuxt/NUXT_ESSENTIALS.md)** (12 min read)
+    - useFetch rule, Nitro server routes, routeRules rendering, SEO wiring
+
+62. **[HTML Cheat Sheet](docs/software-development/frontend/html/HTML_CHEAT_SHEET.md)** (12 min read)
+    - Semantic layout, forms done right, images, accessibility baseline
+
+63. **[AJAX & Fetch Cheat Sheet](docs/software-development/frontend/ajax/AJAX_FETCH_CHEAT_SHEET.md)** (10 min read)
+    - fetch patterns, the response.ok trap, aborts, uploads, SSE map
+
+64. **[jQuery Essentials](docs/software-development/frontend/jquery/JQUERY_ESSENTIALS.md)** (10 min read)
+    - Maintaining legacy well, event delegation, the vanilla migration table
 
 ### Quick Reference
 
-40. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
+65. **[Quick Reference](QUICK_REFERENCE.md)** (5 min read)
     - Common git commands
     - Commit message examples
     - Release checklist
