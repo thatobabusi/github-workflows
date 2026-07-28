@@ -8,6 +8,14 @@ on:
         required: true
         type: string
 
+# Tagging and creating a release are writes. Without this the job runs with a
+# read-only GITHUB_TOKEN and fails at `git push` with a 403 from
+# github-actions[bot] -- which is exactly what happened on the 2.2.0 attempt.
+# Repository or organisation settings can default new workflows to read-only,
+# so a workflow that writes must say so rather than rely on the default.
+permissions:
+  contents: write
+
 jobs:
   release:
     runs-on: ubuntu-latest

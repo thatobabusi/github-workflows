@@ -12,6 +12,9 @@ All notable changes to this project are documented here. Format follows [Keep a 
 ### Fixed
 - **Moved pages rendered as broken HTML.** `assets/scripts.js` still listed those 20 docs as bare filenames, so the site fetched paths that no longer existed. A static server answers a miss with an HTML error page, and the markdown renderer turned that into garbage — pages looked broken instead of reporting themselves missing. All 64 sidebar entries now resolve.
 
+### Fixed
+- **The release workflow could not release.** It declared no `permissions`, so the job ran with a read-only token and `git push` of the tag failed with a 403 from `github-actions[bot]`. Tagging and creating a release are writes, and a workflow that writes must say so rather than rely on a default the repository can change. Found by the 2.2.0 release attempt.
+
 ### Added
 - **The link gate now checks the sidebar registry too.** `scripts/check-links.mjs` already verified markdown links, which is why both READMEs were correct while `scripts.js` was not — nothing was checking it. Every `file:` entry must now exist under `docs/` (fails the build), and any doc missing from the sidebar is reported as a warning. Verified by re-breaking an entry: the gate names both the stale entry and the orphaned file, and exits 1.
 
