@@ -149,4 +149,4 @@ Now PRs physically cannot merge with failing lint.
 
 - [Code Quality Standards](CODE_QUALITY.md)
 - [Quality Gates](QUALITY_GATES.md)
-- [lint-gate.yml workflow](../templates/.github/workflows/lint-gate.yml)
+- [lint-gate.yml workflow](../../templates/.github/workflows/lint-gate.yml)

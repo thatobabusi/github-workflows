@@ -111,4 +111,4 @@ Files rank too, and compete with your own pages if you let them:
 - [SEO Content Writing](SEO_CONTENT_WRITING.md) — keyword strategy, writing rules, measurement
 - [Meta Tags Reference](SEO_META_TAGS.md)
 - [Technical SEO](SEO_TECHNICAL.md)
-- [Documentation Standards](../DOCUMENTATION_STANDARDS.md)
+- [Documentation Standards](../github/DOCUMENTATION_STANDARDS.md)

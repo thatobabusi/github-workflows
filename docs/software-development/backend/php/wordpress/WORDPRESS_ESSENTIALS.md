@@ -75,7 +75,7 @@ Custom tables are legitimate for real relational data — post-meta abuse (every
 
 ## Security Non-Negotiables
 
-The [security baseline](../../../../SECURITY_PERFORMANCE.md) translated to WP idiom:
+The [security baseline](../../../../github/SECURITY_PERFORMANCE.md) translated to WP idiom:
 
 ```php
 // OUTPUT: escape at the template, per context
@@ -98,7 +98,7 @@ Every handler: **nonce + capability + sanitize in + escape out.** Plus operation
 
 | Practice | Tool |
 |----------|------|
-| Composer-managed WP + plugins | **Bedrock** (roots.io) — real [deploys](../../../../DEPLOYMENT_GUIDE.md), env configs, git-sane |
+| Composer-managed WP + plugins | **Bedrock** (roots.io) — real [deploys](../../../../github/DEPLOYMENT_GUIDE.md), env configs, git-sane |
 | Local dev | Herd/Valet, `wp-env`, or LocalWP |
 | CLI everything | **WP-CLI**: `wp plugin update --all`, `wp db export`, `wp search-replace` |
 | Blocks | `@wordpress/create-block` ([React](../../../frontend/javascript/react/REACT_ESSENTIALS.md) under the hood) |

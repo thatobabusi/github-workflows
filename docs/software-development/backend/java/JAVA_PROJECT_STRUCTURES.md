@@ -128,7 +128,7 @@ try (var executor = Executors.newVirtualThreadPerTaskExecutor()) { ... }
 | Constants | SCREAMING_SNAKE | `MAX_RETRIES` |
 | Tests | behavior names | `rejectsMixedCurrencyAddition()` |
 
-Enforcement: Spotless (formatting) + Checkstyle/Error Prone (rules) + ArchUnit (architecture) in the [lint gate](../../../LINTING_GATES.md).
+Enforcement: Spotless (formatting) + Checkstyle/Error Prone (rules) + ArchUnit (architecture) in the [lint gate](../../../github/LINTING_GATES.md).
 
 ## See Also
 

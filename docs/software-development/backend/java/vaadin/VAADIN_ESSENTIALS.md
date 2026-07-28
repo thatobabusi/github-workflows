@@ -73,13 +73,13 @@ Validation rules live once, on the entity/bean — the same Bean Validation the 
 | Backend link | Direct method calls | Type-safe generated TS clients |
 | For | Java-only teams | Mixed teams wanting typed full-stack |
 
-Hilla is Vaadin's answer when you *do* want a React frontend but with generated, type-safe endpoints instead of hand-rolled [API contracts](../../../../API_STANDARDS.md).
+Hilla is Vaadin's answer when you *do* want a React frontend but with generated, type-safe endpoints instead of hand-rolled [API contracts](../../../../github/API_STANDARDS.md).
 
 ## Production Notes
 
 - Production build required (`-Pproduction`) — dev bundle is huge and slow
 - Sessions are sticky: load balancing needs session affinity or shared sessions
-- Startup/footprint follows [Spring Boot](../springboot/SPRINGBOOT_ESSENTIALS.md); the [deploy pipeline](../../../../DEPLOYMENT_GUIDE.md) is unchanged
+- Startup/footprint follows [Spring Boot](../springboot/SPRINGBOOT_ESSENTIALS.md); the [deploy pipeline](../../../../github/DEPLOYMENT_GUIDE.md) is unchanged
 
 ## See Also
 

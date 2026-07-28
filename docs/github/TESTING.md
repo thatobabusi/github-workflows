@@ -14,7 +14,7 @@ npm run test:e2e:ui         # interactive UI mode for debugging
 npm run test:e2e:headed     # watch the browser while tests run
 ```
 
-Playwright starts its own server (`python -m http.server 8090`) via the `webServer` block in [playwright.config.ts](../playwright.config.ts) — no manual setup.
+Playwright starts its own server (`python -m http.server 8090`) via the `webServer` block in [playwright.config.ts](../../playwright.config.ts) — no manual setup.
 
 ## What's Covered
 
@@ -37,7 +37,7 @@ The all-docs sweep is the safety net: adding a doc to `assets/scripts.js` with a
 
 ## CI Gating
 
-The Pages pipeline in [.github/workflows/deploy-pages.yml](../.github/workflows/deploy-pages.yml) runs:
+The Pages pipeline in [.github/workflows/deploy-pages.yml](../../.github/workflows/deploy-pages.yml) runs:
 
 ```
 Lint Code ──▶ E2E Tests ──▶ Deploy to GitHub Pages
@@ -50,7 +50,7 @@ Lint Code ──▶ E2E Tests ──▶ Deploy to GitHub Pages
 - **Go through the real user path.** Sidebar sections start collapsed — use the `expandSection()` / `openDoc()` helpers rather than clicking hidden links.
 - **`.first()` on `#fileContent h1`.** Docs may legitimately contain multiple H1s (e.g. heading-syntax examples in Documentation Standards); bare `h1` locators trip Playwright's strict mode.
 - **Sidebar names ≠ doc titles.** "Actions Advanced" renders "GitHub Actions — Advanced Usage". Assert against a name → heading map, not the link text.
-- **Update the constants when content changes.** `TOTAL_DOCS` and `CATEGORIES` at the top of [standards.spec.ts](../tests/e2e/standards.spec.ts) must track `assets/scripts.js` — the count tests exist precisely to catch drift.
+- **Update the constants when content changes.** `TOTAL_DOCS` and `CATEGORIES` at the top of [standards.spec.ts](../../tests/e2e/standards.spec.ts) must track `assets/scripts.js` — the count tests exist precisely to catch drift.
 - **Prefer `expect(...).toHaveClass(/active/)`** over timeouts — the app switches views synchronously; Playwright's auto-waiting handles the rest.
 
 ## Origin

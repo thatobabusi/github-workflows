@@ -103,7 +103,7 @@ select = ["E", "F", "I", "UP", "B", "SIM"]   # errors, imports, upgrades, bugbea
 strict = true
 ```
 
-Same [lint-gate doctrine](../../../LINTING_GATES.md) as every stack: `ruff check` + `ruff format --check` + `mypy` run locally and as required CI checks; humans never review style.
+Same [lint-gate doctrine](../../../github/LINTING_GATES.md) as every stack: `ruff check` + `ruff format --check` + `mypy` run locally and as required CI checks; humans never review style.
 
 ## Docstrings
 
@@ -135,4 +135,4 @@ One-line docstrings for the obvious; never restate parameters the signature alre
 
 - [Python Project Structures](PYTHON_PROJECT_STRUCTURES.md)
 - [Python Frameworks](PYTHON_FRAMEWORKS.md)
-- [Code Quality](../../../CODE_QUALITY.md)
+- [Code Quality](../../../github/CODE_QUALITY.md)

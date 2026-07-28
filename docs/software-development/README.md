@@ -21,7 +21,7 @@ Stack-specific standards and cheat sheets. Language-agnostic principles live one
 Every stack folder follows the same shape so knowledge transfers:
 
 - **Project Structures** — layouts with a decision table, simplest-first bias
-- **Coding Styles** — the community standard + enforcement toolchain (style is machine-enforced per [Linting Gates](../LINTING_GATES.md))
+- **Coding Styles** — the community standard + enforcement toolchain (style is machine-enforced per [Linting Gates](../github/LINTING_GATES.md))
 - **Frameworks/Essentials** — honest trade-offs, not advocacy
 
-Cross-cutting rules referenced everywhere: [Code Quality](../CODE_QUALITY.md) · [Security & Performance](../SECURITY_PERFORMANCE.md) · [Deployment Guide](../DEPLOYMENT_GUIDE.md) · [Design Patterns](../DESIGN_PATTERNS.md)
+Cross-cutting rules referenced everywhere: [Code Quality](../github/CODE_QUALITY.md) · [Security & Performance](../github/SECURITY_PERFORMANCE.md) · [Deployment Guide](../github/DEPLOYMENT_GUIDE.md) · [Design Patterns](../github/DESIGN_PATTERNS.md)

@@ -16,7 +16,7 @@ Push to main
      └─ fail ───────┴─ fail → deployment blocked
 ```
 
-See [Linting Gates](LINTING_GATES.md) for the gate pattern and [deploy.yml](../templates/.github/workflows/deploy.yml) for the template.
+See [Linting Gates](LINTING_GATES.md) for the gate pattern and [deploy.yml](../../templates/.github/workflows/deploy.yml) for the template.
 
 ## Environment Configuration
 

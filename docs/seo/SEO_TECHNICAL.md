@@ -118,7 +118,7 @@ Blocking everything by reflex also removes you from AI answers that cite sources
 - [ ] Search Console: coverage errors, CWV, manual actions — check weekly
 - [ ] Impressions + CTR per page: high impressions with weak CTR → rewrite that title/description
 - [ ] `site:example.com` sanity check — is what's indexed what you expect?
-- [ ] Uptime + 5xx alerting ([Deployment Guide](../DEPLOYMENT_GUIDE.md) health checks)
+- [ ] Uptime + 5xx alerting ([Deployment Guide](../github/DEPLOYMENT_GUIDE.md) health checks)
 - [ ] Log 404s server-side; 301 the ones with inbound links
 - [ ] Lighthouse CI in the pipeline for CWV regressions
 - [ ] Expectation-setting: new content takes **4–6 months** to show impression growth — measure trends, not days ([the optimization loop](SEO_CONTENT_WRITING.md))
@@ -127,4 +127,4 @@ Blocking everything by reflex also removes you from AI answers that cite sources
 
 - [SEO Cheat Sheet](SEO_CHEAT_SHEET.md)
 - [Meta Tags Reference](SEO_META_TAGS.md)
-- [Security & Performance](../SECURITY_PERFORMANCE.md)
+- [Security & Performance](../github/SECURITY_PERFORMANCE.md)

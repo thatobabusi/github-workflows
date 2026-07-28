@@ -89,7 +89,7 @@ The high-value set: forms + validation, modal, dropdown, toast, offcanvas, badge
 <html data-bs-theme="dark">
 ```
 
-Native theming via `data-bs-theme` — the same attribute-toggle pattern as [this site's theme system](../../../DOCUMENTATION_STANDARDS.md). Respect user choice: persist in localStorage, default from `prefers-color-scheme`.
+Native theming via `data-bs-theme` — the same attribute-toggle pattern as [this site's theme system](../../../github/DOCUMENTATION_STANDARDS.md). Respect user choice: persist in localStorage, default from `prefers-color-scheme`.
 
 ## Accessibility Notes
 

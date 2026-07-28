@@ -93,7 +93,7 @@ public Order place(CreateOrderRequest request) {
 
 | Tool | Role |
 |------|------|
-| **Spotless** (+ google-java-format) | Formatting — runs in the [lint gate](../../../LINTING_GATES.md) |
+| **Spotless** (+ google-java-format) | Formatting — runs in the [lint gate](../../../github/LINTING_GATES.md) |
 | **Error Prone** | Compile-time bug patterns |
 | **Checkstyle** | Residual style rules the formatter can't own |
 | **NullAway** | Null-safety enforcement |

@@ -58,7 +58,7 @@ app.use((err: Error, req: Request, res: Response, _next: NextFunction) => {
 });
 ```
 
-One handler, [API Standards](../../../API_STANDARDS.md) status codes, opaque 500s in production.
+One handler, [API Standards](../../../github/API_STANDARDS.md) status codes, opaque 500s in production.
 
 ## Structure & Validation
 
@@ -100,4 +100,4 @@ Plus the [Node production rules](../node/NODE_ESSENTIALS.md): graceful `SIGTERM`
 
 - [Node Essentials](../node/NODE_ESSENTIALS.md) — runtime rules + Fastify comparison
 - [NestJS Essentials](../../frontend/javascript/nestjs/NESTJS_ESSENTIALS.md) — Express with architecture included
-- [API Standards](../../../API_STANDARDS.md)
+- [API Standards](../../../github/API_STANDARDS.md)

@@ -77,7 +77,7 @@ export async function cancelOrder(id: number) {
 ```
 
 - Every fetch declares its caching intent — the defaults have shifted across versions; explicit beats surprised
-- Server Actions are public endpoints in disguise: **validate and authorize inside every action** ([Security](../../../../SECURITY_PERFORMANCE.md))
+- Server Actions are public endpoints in disguise: **validate and authorize inside every action** ([Security](../../../../github/SECURITY_PERFORMANCE.md))
 - After mutation: `revalidatePath`/`revalidateTag` — stale cache is the classic Next bug
 
 ## Rendering Modes

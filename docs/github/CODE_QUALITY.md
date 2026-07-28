@@ -150,7 +150,7 @@ strategy:
     laravel: ['11.*', '12.*']
 ```
 
-See [tests.yml](../templates/.github/workflows/tests.yml) for the full template.
+See [tests.yml](../../templates/.github/workflows/tests.yml) for the full template.
 
 ## Mocking & Fakes
 

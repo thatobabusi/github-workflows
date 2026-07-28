@@ -100,7 +100,7 @@ def health():
 | **RQ** | Redis | Simple, readable, enough for most apps |
 | **arq** | Redis | Async-native, pairs with FastAPI |
 
-The [async patterns rules](../../../ASYNC_PATTERNS.md) apply verbatim: idempotent jobs, bounded retries, explicit failure handlers, workers under a supervisor.
+The [async patterns rules](../../../github/ASYNC_PATTERNS.md) apply verbatim: idempotent jobs, bounded retries, explicit failure handlers, workers under a supervisor.
 
 ## Full-Stack Pairings
 
@@ -122,4 +122,4 @@ HTMX occupies the Livewire slot from the [PHP pairings](../php/PHP_FRAMEWORKS.md
 
 - [Python Project Structures](PYTHON_PROJECT_STRUCTURES.md)
 - [Python Coding Styles](PYTHON_CODING_STYLES.md)
-- [API Standards](../../../API_STANDARDS.md)
+- [API Standards](../../../github/API_STANDARDS.md)

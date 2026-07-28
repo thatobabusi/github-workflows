@@ -4,6 +4,17 @@ All notable changes to this project are documented here. Format follows [Keep a 
 
 ## [Unreleased]
 
+## [2.2.0] — 2026-07-28
+
+### Changed
+- **GitHub-specific standards moved into `docs/github/`** — the 20 workflow, quality and process docs that used to sit loose at the top of `docs/` now live in their own folder, matching how `seo/` and `software-development/` are already organised. Every cross-link, both READMEs and the sidebar registry were updated with them.
+
+### Fixed
+- **Moved pages rendered as broken HTML.** `assets/scripts.js` still listed those 20 docs as bare filenames, so the site fetched paths that no longer existed. A static server answers a miss with an HTML error page, and the markdown renderer turned that into garbage — pages looked broken instead of reporting themselves missing. All 64 sidebar entries now resolve.
+
+### Added
+- **The link gate now checks the sidebar registry too.** `scripts/check-links.mjs` already verified markdown links, which is why both READMEs were correct while `scripts.js` was not — nothing was checking it. Every `file:` entry must now exist under `docs/` (fails the build), and any doc missing from the sidebar is reported as a warning. Verified by re-breaking an entry: the gate names both the stale entry and the orphaned file, and exits 1.
+
 ### Added
 - **Stack batch 2 — 13 docs, every remaining empty folder filled:** [Express](docs/software-development/backend/expressjs/EXPRESS_ESSENTIALS.md), [Vaadin](docs/software-development/backend/java/vaadin/VAADIN_ESSENTIALS.md), [Django](docs/software-development/backend/python/django/DJANGO_ESSENTIALS.md), [Flask](docs/software-development/backend/python/flask/FLASK_ESSENTIALS.md), [NestJS](docs/software-development/frontend/javascript/nestjs/NESTJS_ESSENTIALS.md), [Nuxt](docs/software-development/frontend/javascript/nuxt/NUXT_ESSENTIALS.md), [HTML](docs/software-development/frontend/html/HTML_CHEAT_SHEET.md), [AJAX & Fetch](docs/software-development/frontend/ajax/AJAX_FETCH_CHEAT_SHEET.md), [jQuery](docs/software-development/frontend/jquery/JQUERY_ESSENTIALS.md), [MySQL](docs/software-development/db/mysql/MYSQL_ESSENTIALS.md), [MariaDB](docs/software-development/db/mariadb/MARIADB_ESSENTIALS.md), [MongoDB](docs/software-development/db/mongodb/MONGODB_ESSENTIALS.md), [SQL Server](docs/software-development/db/sqlserver/SQLSERVER_ESSENTIALS.md) — site now 64 docs in 13 categories
 - **PHP framework deep-dives** (🐘 PHP category): [Laravel](docs/software-development/backend/php/laravel/LARAVEL_ESSENTIALS.md), [Symfony](docs/software-development/backend/php/symfony/SYMFONY_ESSENTIALS.md), [Vanilla PHP](docs/software-development/backend/php/vanilla/VANILLA_PHP_ESSENTIALS.md), [WordPress](docs/software-development/backend/php/wordpress/WORDPRESS_ESSENTIALS.md)
@@ -30,10 +41,10 @@ All notable changes to this project are documented here. Format follows [Keep a 
 - **SEO section** (docs/seo/, new sidebar category): [SEO Cheat Sheet](docs/seo/SEO_CHEAT_SHEET.md), [Meta Tags Reference](docs/seo/SEO_META_TAGS.md), [Technical SEO](docs/seo/SEO_TECHNICAL.md)
 - **PHP Architecture section** (docs/software-development/backend/php/, new sidebar category): [Project Structures](docs/software-development/backend/php/PHP_PROJECT_STRUCTURES.md), [Coding Styles](docs/software-development/backend/php/PHP_CODING_STYLES.md), [Design Patterns (PHP)](docs/software-development/backend/php/PHP_DESIGN_PATTERNS.md), [Frameworks](docs/software-development/backend/php/PHP_FRAMEWORKS.md)
 - Site internal-link resolution now handles subdirectory docs (basename matching in bindInternalLinks)
-- [docs/TESTING.md](docs/TESTING.md) — how to run the e2e suite, coverage map, CI gating, and conventions for new tests; registered in the interactive site (Quality & Gates), docs index, and README
+- [docs/TESTING.md](docs/github/TESTING.md) — how to run the e2e suite, coverage map, CI gating, and conventions for new tests; registered in the interactive site (Quality & Gates), docs index, and README
 - Playwright e2e suite (48 tests, ported from laravel-13-cheat-sheet and adapted): header/theming, collapsed-sidebar behavior, navigation, markdown rendering (tables, code labels, TOC, internal links), search, responsive breakpoints, accessibility, scroll-to-top, error handling, full-journey workflows including an all-19-docs sweep. E2E job added to the Pages pipeline as a deploy gate (lint -> e2e -> deploy).
 - [docs/README.md](docs/README.md) — central index of all standards docs, grouped by category with read times and a suggested reading order
-- **Tips & Tricks** section (new sidebar category): [Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md) (reflog, bisect, worktrees, rerere, autosquash, precision staging), [Actions Advanced](docs/ACTIONS_ADVANCED.md) (reusable workflows, composite actions, caching, dynamic matrices, OIDC hardening, debugging), [Nice to Know](docs/NICE_TO_KNOW.md) (GitHub URL tricks, shortcuts, CODEOWNERS, gh CLI power usage, markdown extras)
+- **Tips & Tricks** section (new sidebar category): [Git Tips & Tricks](docs/github/GIT_TIPS_TRICKS.md) (reflog, bisect, worktrees, rerere, autosquash, precision staging), [Actions Advanced](docs/github/ACTIONS_ADVANCED.md) (reusable workflows, composite actions, caching, dynamic matrices, OIDC hardening, debugging), [Nice to Know](docs/github/NICE_TO_KNOW.md) (GitHub URL tricks, shortcuts, CODEOWNERS, gh CLI power usage, markdown extras)
 
 ## [2.1.1] - 2026-07-15
 
@@ -46,17 +57,17 @@ Standards expansion based on lessons from the laravel-13-cheat-sheet build: lint
 
 ### Added
 - Interactive standards reference site (`index.html` + `assets/`) — searchable sidebar, dark/light mode, auto-TOC from headings, syntax-highlighted examples, table rendering, mobile responsive; deployed via GitHub Pages with a lint gate
-- **[Linting Gates](docs/LINTING_GATES.md)** — linting as a deployment gate, with hard-won lessons (BOM-free JSON configs, glob quoting on Windows, pragmatic StyleLint relaxation, CDN globals in ESLint, `head-script-disabled`)
-- **[Quality Gates](docs/QUALITY_GATES.md)** — four-gate model: pre-commit → PR merge → deploy → release, with per-project adoption levels
-- **[Code Quality](docs/CODE_QUALITY.md)** — testing layers, full-scope e2e coverage standard (from the 17→50+ Playwright expansion), coverage floors, static analysis levels
-- **[Security & Performance](docs/SECURITY_PERFORMANCE.md)** — production baseline checklists: CSRF/XSS, auth, mass assignment, N+1 prevention, caching, rate limiting
-- **[Async Patterns](docs/ASYNC_PATTERNS.md)** — queue/job/scheduler/broadcasting standards with idempotency and failure-handling requirements
-- **[Design Patterns](docs/DESIGN_PATTERNS.md)** — pattern catalog with use/don't-use decision table, plus frontend patterns proven in the docs sites
-- **[API Standards](docs/API_STANDARDS.md)** — versioning, resources, pagination, status codes, CORS, minimum API test coverage
-- **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** — gated pipelines, GitHub Pages lessons (hybrid-config fix, root serving), expand/contract migrations, rollback procedures
-- **[Monorepo Structure](docs/MONOREPO_STRUCTURE.md)** — workspaces, shared configs, path-filtered CI, submodule two-step workflow (from win12-locales)
-- **[Pull Request Process](docs/PULL_REQUEST_PROCESS.md)** — PR lifecycle, review standards, merge strategies, size guidelines
-- **[Implementation Checklist](docs/IMPLEMENTATION_CHECKLIST.md)** — phase-by-phase adoption path for new projects
+- **[Linting Gates](docs/github/LINTING_GATES.md)** — linting as a deployment gate, with hard-won lessons (BOM-free JSON configs, glob quoting on Windows, pragmatic StyleLint relaxation, CDN globals in ESLint, `head-script-disabled`)
+- **[Quality Gates](docs/github/QUALITY_GATES.md)** — four-gate model: pre-commit → PR merge → deploy → release, with per-project adoption levels
+- **[Code Quality](docs/github/CODE_QUALITY.md)** — testing layers, full-scope e2e coverage standard (from the 17→50+ Playwright expansion), coverage floors, static analysis levels
+- **[Security & Performance](docs/github/SECURITY_PERFORMANCE.md)** — production baseline checklists: CSRF/XSS, auth, mass assignment, N+1 prevention, caching, rate limiting
+- **[Async Patterns](docs/github/ASYNC_PATTERNS.md)** — queue/job/scheduler/broadcasting standards with idempotency and failure-handling requirements
+- **[Design Patterns](docs/github/DESIGN_PATTERNS.md)** — pattern catalog with use/don't-use decision table, plus frontend patterns proven in the docs sites
+- **[API Standards](docs/github/API_STANDARDS.md)** — versioning, resources, pagination, status codes, CORS, minimum API test coverage
+- **[Deployment Guide](docs/github/DEPLOYMENT_GUIDE.md)** — gated pipelines, GitHub Pages lessons (hybrid-config fix, root serving), expand/contract migrations, rollback procedures
+- **[Monorepo Structure](docs/github/MONOREPO_STRUCTURE.md)** — workspaces, shared configs, path-filtered CI, submodule two-step workflow (from win12-locales)
+- **[Pull Request Process](docs/github/PULL_REQUEST_PROCESS.md)** — PR lifecycle, review standards, merge strategies, size guidelines
+- **[Implementation Checklist](docs/github/IMPLEMENTATION_CHECKLIST.md)** — phase-by-phase adoption path for new projects
 - Workflow templates: `lint-gate.yml`, `security-scan.yml`, `deploy.yml`, `deploy-pages.yml` (all using the gating pattern), plus a workflows README
 - Lint tooling for this repo itself (ESLint, StyleLint, HTMLHint) — the repo now passes its own gates
 - `CHANGELOG.md`, `package.json`

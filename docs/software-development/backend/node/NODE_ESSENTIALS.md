@@ -37,7 +37,7 @@ service/
 
 - **TypeScript strict by default** — plain JS only for scripts under ~50 lines
 - ESM (`"type": "module"`) for new projects; no new CommonJS
-- Pin the runtime: `.nvmrc` + `engines` + the same version in [CI](../../../LINTING_GATES.md)
+- Pin the runtime: `.nvmrc` + `engines` + the same version in [CI](../../../github/LINTING_GATES.md)
 - Lockfile committed; `npm ci` (never `npm install`) in CI and deploys — the [composer install/update distinction](../../composer/COMPOSER_CHEAT_SHEET.md), same rule
 
 ## Runtime Fundamentals
@@ -52,7 +52,7 @@ const hash = crypto.pbkdf2Sync(password, salt, 600_000, 64, 'sha512');
 const hash = await promisify(crypto.pbkdf2)(password, salt, 600_000, 64, 'sha512');
 ```
 
-- CPU-heavy work → `worker_threads` or a [queue](../../../ASYNC_PATTERNS.md) — one blocked loop = every user waiting
+- CPU-heavy work → `worker_threads` or a [queue](../../../github/ASYNC_PATTERNS.md) — one blocked loop = every user waiting
 - `async/await` everywhere; raw `.then()` chains and callbacks only at library boundaries
 - Always handle the escape hatches in production:
 
@@ -97,7 +97,7 @@ const env = z.object({
 export default env;
 ```
 
-Boot fails loudly on missing config instead of crashing at 3am on first use. Secrets via env only — [same rule as every stack](../../../SECURITY_PERFORMANCE.md).
+Boot fails loudly on missing config instead of crashing at 3am on first use. Secrets via env only — [same rule as every stack](../../../github/SECURITY_PERFORMANCE.md).
 
 ## Testing
 
@@ -105,7 +105,7 @@ Boot fails loudly on missing config instead of crashing at 3am on first use. Sec
 |------|------|
 | **Vitest** | Unit/integration — fast, ESM-native, Jest-compatible API |
 | **Supertest** / `app.inject()` (Fastify) | HTTP endpoint tests without a port |
-| **Playwright** | E2E ([Testing doctrine](../../../TESTING.md)) |
+| **Playwright** | E2E ([Testing doctrine](../../../github/TESTING.md)) |
 | **Testcontainers** | Real Postgres/Redis in integration tests |
 
 ## Production Rules
@@ -113,8 +113,8 @@ Boot fails loudly on missing config instead of crashing at 3am on first use. Sec
 - Run under a supervisor: systemd, PM2, or a [container](../../docker/DOCKER_CHEAT_SHEET.md) orchestrator — never bare `node` in a tmux
 - One process per core via cluster mode or (better) horizontal container replicas
 - Structured JSON logs to stdout (pino); the platform ships them
-- Health endpoint + graceful shutdown wired into the [deploy gate](../../../DEPLOYMENT_GUIDE.md)
-- `npm audit` in the [security scan](../../../SECURITY_PERFORMANCE.md); dependencies reviewed before adding — node_modules is a supply-chain surface
+- Health endpoint + graceful shutdown wired into the [deploy gate](../../../github/DEPLOYMENT_GUIDE.md)
+- `npm audit` in the [security scan](../../../github/SECURITY_PERFORMANCE.md); dependencies reviewed before adding — node_modules is a supply-chain surface
 
 ## Tooling Quick Reference
 
@@ -123,11 +123,11 @@ Boot fails loudly on missing config instead of crashing at 3am on first use. Sec
 | Run TS directly in dev | `tsx` |
 | Lint + format | ESLint flat config + Prettier |
 | Version manager | `fnm` / `nvm` (reads .nvmrc) |
-| Faster installs / monorepos | `pnpm` workspaces ([Monorepo Structure](../../../MONOREPO_STRUCTURE.md)) |
+| Faster installs / monorepos | `pnpm` workspaces ([Monorepo Structure](../../../github/MONOREPO_STRUCTURE.md)) |
 | Publish a library | `tsup` (bundles ESM+CJS+types) |
 
 ## See Also
 
 - [Frontend stacks](../../frontend/README.md) — React, Vue, Angular, Next.js
-- [Async Patterns](../../../ASYNC_PATTERNS.md)
+- [Async Patterns](../../../github/ASYNC_PATTERNS.md)
 - [Docker Cheat Sheet](../../docker/DOCKER_CHEAT_SHEET.md)

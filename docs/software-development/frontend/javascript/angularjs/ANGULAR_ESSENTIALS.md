@@ -125,7 +125,7 @@ Lazy-load every feature; functional guards (`CanActivateFn`) over class guards.
 ## Testing
 
 - Unit: Jasmine/Karma default, or Vitest via analog — assert component behavior through the DOM (TestBed + Testing Library's Angular adapter)
-- E2E: Playwright, per the [testing doctrine](../../../../TESTING.md)
+- E2E: Playwright, per the [testing doctrine](../../../../github/TESTING.md)
 - Services with `HttpClient`: `provideHttpClientTesting()` — never hit real endpoints in unit tests
 
 ## Upgrade Discipline

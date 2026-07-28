@@ -47,7 +47,7 @@ $router->dispatch(
 );
 ```
 
-Web server rewrite sends everything to it (nginx `try_files $uri /index.php$is_args$args;` — [Deployment Guide](../../../../DEPLOYMENT_GUIDE.md) has full configs).
+Web server rewrite sends everything to it (nginx `try_files $uri /index.php$is_args$args;` — [Deployment Guide](../../../../github/DEPLOYMENT_GUIDE.md) has full configs).
 
 ## Routing Without a Framework
 
@@ -74,7 +74,7 @@ $stmt->execute([$userId, 'pending']);
 $orders = $stmt->fetchAll();
 ```
 
-**Prepared statements for every query with input, no exceptions** — the [SQL injection rule](../../../../SECURITY_PERFORMANCE.md) with no ORM safety net. Want more comfort without a framework: `doctrine/dbal` (query builder) or `laravel/illuminate-database` standalone.
+**Prepared statements for every query with input, no exceptions** — the [SQL injection rule](../../../../github/SECURITY_PERFORMANCE.md) with no ORM safety net. Want more comfort without a framework: `doctrine/dbal` (query builder) or `laravel/illuminate-database` standalone.
 
 ## Templating: Escape by Default
 
@@ -94,7 +94,7 @@ Every output escaped unless deliberately raw. Templates grow past trivial → `t
 
 ## The Security Checklist You Own Now
 
-No framework means [every default](../../../../SECURITY_PERFORMANCE.md) is your job:
+No framework means [every default](../../../../github/SECURITY_PERFORMANCE.md) is your job:
 
 - [ ] CSRF: token in session, hidden field in every form, compare with `hash_equals()`
 - [ ] Passwords: `password_hash()` / `password_verify()` — nothing else, ever
@@ -119,7 +119,7 @@ Assembling more than three of these? You're building a framework — [go get one
 
 ## Quality Bar Unchanged
 
-Vanilla projects still carry the [lint gate](../../../../LINTING_GATES.md): Pint + PHPStan + PHPUnit via composer scripts, strict types in every file, [coding styles](../PHP_CODING_STYLES.md) enforced. No framework is not a license for no standards.
+Vanilla projects still carry the [lint gate](../../../../github/LINTING_GATES.md): Pint + PHPStan + PHPUnit via composer scripts, strict types in every file, [coding styles](../PHP_CODING_STYLES.md) enforced. No framework is not a license for no standards.
 
 ## See Also
 

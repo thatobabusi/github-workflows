@@ -49,7 +49,7 @@ The deploy workflow itself re-verifies (never trust that the branch state equals
 - [ ] Deploy job runs `if: success()` only
 - [ ] Post-deploy health check returns 200
 
-See [Linting Gates](LINTING_GATES.md) and [deploy.yml](../templates/.github/workflows/deploy.yml).
+See [Linting Gates](LINTING_GATES.md) and [deploy.yml](../../templates/.github/workflows/deploy.yml).
 
 ## Gate 4 — Release
 

@@ -31,7 +31,7 @@ The title becomes the squash-merge commit message — write it accordingly.
 
 ### PR Description
 
-Use the [template](../.github/pull_request_template.md). Minimum contents:
+Use the [template](../../.github/pull_request_template.md). Minimum contents:
 
 - **What** changed and **why** (link the issue)
 - **How to verify** — exact steps or commands
@@ -108,4 +108,4 @@ Convert to ready only when the checklist in the template is complete.
 - [Branching Strategy](BRANCHING_STRATEGY.md)
 - [Commit Standards](COMMIT_STANDARDS.md)
 - [Quality Gates](QUALITY_GATES.md)
-- [PR Template](../.github/pull_request_template.md)
+- [PR Template](../../.github/pull_request_template.md)

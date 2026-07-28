@@ -35,7 +35,7 @@ class PostController extends Controller
 
 **Costs:** magic (facades, container auto-resolution) hides mechanics from juniors; Eloquent's Active Record couples models to persistence; upgrades yearly (tolerable — Shift automates).
 
-**Fits:** 90% of what we build. Full structure in [PHP Project Structures](PHP_PROJECT_STRUCTURES.md) and [File Structure](../../../FILE_STRUCTURE.md).
+**Fits:** 90% of what we build. Full structure in [PHP Project Structures](PHP_PROJECT_STRUCTURES.md) and [File Structure](../../../github/FILE_STRUCTURE.md).
 
 ## Symfony
 
@@ -120,4 +120,4 @@ Whatever the framework, these keep you portable:
 
 - [PHP Project Structures](PHP_PROJECT_STRUCTURES.md)
 - [PHP Design Patterns](PHP_DESIGN_PATTERNS.md)
-- [API Standards](../../../API_STANDARDS.md)
+- [API Standards](../../../github/API_STANDARDS.md)

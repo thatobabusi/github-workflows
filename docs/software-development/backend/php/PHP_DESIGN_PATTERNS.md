@@ -1,6 +1,6 @@
 # PHP Design Patterns
 
-How the classic patterns actually look in modern PHP — idiomatic implementations, not textbook UML transcription. Language-agnostic pattern *selection* guidance lives in [Design Patterns](../../../DESIGN_PATTERNS.md); this doc is the PHP-specific how.
+How the classic patterns actually look in modern PHP — idiomatic implementations, not textbook UML transcription. Language-agnostic pattern *selection* guidance lives in [Design Patterns](../../../github/DESIGN_PATTERNS.md); this doc is the PHP-specific how.
 
 ## Dependency Injection — the Meta-Pattern
 
@@ -228,11 +228,11 @@ Same lifetime guarantee, zero global state, fully testable.
 | `new SomeService()` inside a class | Constructor injection |
 | Interfaces with exactly one conceivable implementation, forever | Delete the interface |
 | `AbstractBaseManagerFactory` | You've transcribed Java; use closures/match |
-| Repository wrapping Eloquent 1:1 | Use the model directly ([when repositories earn their keep](../../../DESIGN_PATTERNS.md)) |
+| Repository wrapping Eloquent 1:1 | Use the model directly ([when repositories earn their keep](../../../github/DESIGN_PATTERNS.md)) |
 | Trait with state used by 20 classes | That's a dependency, make it a class |
 
 ## See Also
 
-- [Design Patterns](../../../DESIGN_PATTERNS.md) — selection guidance
+- [Design Patterns](../../../github/DESIGN_PATTERNS.md) — selection guidance
 - [PHP Coding Styles](PHP_CODING_STYLES.md)
 - [PHP Project Structures](PHP_PROJECT_STRUCTURES.md)

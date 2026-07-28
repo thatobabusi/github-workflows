@@ -52,7 +52,7 @@ az webapp deployment github-actions add \
 
 Production checklist:
 
-- [ ] **Deploy slots**: deploy to `staging` slot → health check → `az webapp deployment slot swap` = zero-downtime with instant rollback ([Deployment Guide](../../DEPLOYMENT_GUIDE.md) symlink strategy, managed)
+- [ ] **Deploy slots**: deploy to `staging` slot → health check → `az webapp deployment slot swap` = zero-downtime with instant rollback ([Deployment Guide](../../github/DEPLOYMENT_GUIDE.md) symlink strategy, managed)
 - [ ] App settings from Key Vault references, not pasted values: `@Microsoft.KeyVault(SecretUri=...)`
 - [ ] `WEBSITES_ENABLE_APP_SERVICE_STORAGE=false` for containerized apps
 - [ ] Always On enabled (B1+) so the app doesn't cold-start after idle
@@ -74,7 +74,7 @@ Scale-to-zero + per-second billing makes this the cheapest way to run small [Doc
 
 ## CI/CD Integration
 
-OIDC federation — no publish-profile secrets stored in GitHub ([Actions Advanced](../../ACTIONS_ADVANCED.md) security rules):
+OIDC federation — no publish-profile secrets stored in GitHub ([Actions Advanced](../../github/ACTIONS_ADVANCED.md) security rules):
 
 ```yaml
 permissions:
@@ -94,7 +94,7 @@ steps:
       slot-name: staging
 ```
 
-The deploy job still sits behind the [lint + test gates](../../LINTING_GATES.md); the slot swap happens only after the staging health check passes.
+The deploy job still sits behind the [lint + test gates](../../github/LINTING_GATES.md); the slot swap happens only after the staging health check passes.
 
 ## Cost Sanity
 
@@ -116,5 +116,5 @@ kv-{app}-{env}          kv-myapp-prod
 ## See Also
 
 - [Docker Cheat Sheet](../docker/DOCKER_CHEAT_SHEET.md)
-- [Deployment Guide](../../DEPLOYMENT_GUIDE.md)
-- [Actions Advanced](../../ACTIONS_ADVANCED.md) — OIDC details
+- [Deployment Guide](../../github/DEPLOYMENT_GUIDE.md)
+- [Actions Advanced](../../github/ACTIONS_ADVANCED.md) — OIDC details

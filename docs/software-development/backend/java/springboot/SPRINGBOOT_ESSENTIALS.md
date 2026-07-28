@@ -53,7 +53,7 @@ Rules:
 
 - **Never field-inject** (`@Autowired` on fields) — constructor injection keeps dependencies explicit and tests honest
 - `@Transactional` on service methods, not controllers or repositories
-- Request/response records at the boundary; JPA entities never leave the service layer (same rule as [API Standards](../../../../API_STANDARDS.md) resources)
+- Request/response records at the boundary; JPA entities never leave the service layer (same rule as [API Standards](../../../../github/API_STANDARDS.md) resources)
 
 ## Configuration
 
@@ -72,7 +72,7 @@ spring:
 public record BillingProperties(String provider, int retryLimit) {}
 ```
 
-- Secrets via environment variables, never in YAML ([same rule everywhere](../../../../SECURITY_PERFORMANCE.md))
+- Secrets via environment variables, never in YAML ([same rule everywhere](../../../../github/SECURITY_PERFORMANCE.md))
 - Profiles = environments; activate with `SPRING_PROFILES_ACTIVE=prod`
 
 ## Testing
@@ -109,7 +109,7 @@ Prefer slice tests + Testcontainers over mocking the database — mocked reposit
 ## Production Notes
 
 - Actuator: expose `health`, `info`, `metrics` — lock down the rest
-- Health endpoint feeds the [deploy pipeline's post-deploy check](../../../../DEPLOYMENT_GUIDE.md)
+- Health endpoint feeds the [deploy pipeline's post-deploy check](../../../../github/DEPLOYMENT_GUIDE.md)
 - Build OCI images with `./gradlew bootBuildImage` (buildpacks — no hand-rolled Dockerfile needed, but see [Docker](../../../docker/DOCKER_CHEAT_SHEET.md) when you do)
 - Virtual threads (Boot 3.2+): `spring.threads.virtual.enabled: true` for thread-per-request scalability
 
@@ -117,4 +117,4 @@ Prefer slice tests + Testcontainers over mocking the database — mocked reposit
 
 - [Java Project Structures](../JAVA_PROJECT_STRUCTURES.md)
 - [Quarkus Essentials](../quarkus/QUARKUS_ESSENTIALS.md) — the alternative
-- [API Standards](../../../../API_STANDARDS.md)
+- [API Standards](../../../../github/API_STANDARDS.md)

@@ -97,7 +97,7 @@ mongorestore --archive=backup.gz --gzip
 
 - Replica sets are the unit of production (even single-node dev benefits — enables transactions)
 - Atlas = the managed default; self-host only with a reason
-- Auth ON always — historical "open Mongo on 27017" breaches were all default-config ([security baseline](../../../SECURITY_PERFORMANCE.md))
+- Auth ON always — historical "open Mongo on 27017" breaches were all default-config ([security baseline](../../../github/SECURITY_PERFORMANCE.md))
 
 ## See Also
 

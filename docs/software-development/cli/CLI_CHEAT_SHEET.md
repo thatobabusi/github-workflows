@@ -114,7 +114,7 @@ main "$@"
 ```
 
 - Quote every expansion: `"$var"`, `"$(cmd)"` — unquoted is the #1 script bug
-- `shellcheck script.sh` in the [lint gate](../../LINTING_GATES.md) for any committed script
+- `shellcheck script.sh` in the [lint gate](../../github/LINTING_GATES.md) for any committed script
 - Long-lived automation graduates from bash to a real language (Python/TS) at ~50 lines
 
 ## One-Liners Worth Stealing
@@ -145,6 +145,6 @@ fd . -t f --changed-within 1h --exclude node_modules
 
 ## See Also
 
-- [Git Tips & Tricks](../../GIT_TIPS_TRICKS.md)
+- [Git Tips & Tricks](../../github/GIT_TIPS_TRICKS.md)
 - [Docker Cheat Sheet](../docker/DOCKER_CHEAT_SHEET.md)
-- [Nice to Know](../../NICE_TO_KNOW.md) — the gh CLI section
+- [Nice to Know](../../github/NICE_TO_KNOW.md) — the gh CLI section

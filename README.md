@@ -76,114 +76,114 @@ Deployed via [deploy-pages.yml](.github/workflows/deploy-pages.yml) — gated be
 
 ### Core Standards (Read First)
 
-1. **[Branching Strategy](docs/BRANCHING_STRATEGY.md)** (15 min read)
+1. **[Branching Strategy](docs/github/BRANCHING_STRATEGY.md)** (15 min read)
    - Multi-tier branch model: main → development → feature/QA/UAT
    - When to create each branch type
    - Merge workflows for features and releases
    - Protection rules and best practices
 
-2. **[Commit Standards](docs/COMMIT_STANDARDS.md)** (10 min read)
+2. **[Commit Standards](docs/github/COMMIT_STANDARDS.md)** (10 min read)
    - Semantic commit format: `<type>(<scope>): <subject>`
    - Types: feat, fix, docs, style, refactor, perf, test, chore, ci
    - Examples and common mistakes to avoid
    - Automated changelog generation
 
-3. **[Release Standards](docs/RELEASE_STANDARDS.md)** (12 min read)
+3. **[Release Standards](docs/github/RELEASE_STANDARDS.md)** (12 min read)
    - Semantic Versioning (MAJOR.MINOR.PATCH)
    - Release workflow from development → main
    - CHANGELOG.md format and updates
    - GitHub Release creation with auto-generated notes
 
-4. **[Pull Request Process](docs/PULL_REQUEST_PROCESS.md)** (10 min read)
+4. **[Pull Request Process](docs/github/PULL_REQUEST_PROCESS.md)** (10 min read)
    - PR lifecycle, titles, and description requirements
    - Review standards for authors and reviewers
    - Merge strategies per target branch and size guidelines
 
 ### Quality & Gates
 
-5. **[Code Quality](docs/CODE_QUALITY.md)** (12 min read)
+5. **[Code Quality](docs/github/CODE_QUALITY.md)** (12 min read)
    - The five-layer quality stack: lint → static analysis → unit → feature → e2e
    - Full-scope e2e coverage standard (Playwright)
    - Coverage floors and matrix testing
 
-6. **[Linting Gates](docs/LINTING_GATES.md)** (10 min read)
+6. **[Linting Gates](docs/github/LINTING_GATES.md)** (10 min read)
    - Linting as a deployment gate — failing checks block deploys
    - Linter configs per stack with pragmatic rule guidance
    - Hard-won gotchas: BOM-free JSON, glob quoting, CDN globals
 
-7. **[Quality Gates](docs/QUALITY_GATES.md)** (8 min read)
+7. **[Quality Gates](docs/github/QUALITY_GATES.md)** (8 min read)
    - Four gates: pre-commit → PR merge → deploy → release
    - Branch protection configuration
    - Per-project adoption levels (L0–L3)
 
-8. **[Testing](docs/TESTING.md)** (8 min read)
+8. **[Testing](docs/github/TESTING.md)** (8 min read)
    - Running the 48-test Playwright suite (5 browser projects)
    - Coverage map and the all-docs sweep
    - CI gating: lint -> e2e -> deploy
 
 ### Architecture
 
-9. **[Design Patterns](docs/DESIGN_PATTERNS.md)** (15 min read)
+9. **[Design Patterns](docs/github/DESIGN_PATTERNS.md)** (15 min read)
    - Use/don't-use decision table for each pattern
    - Repository, Service, Strategy, Events, Scopes, Value Objects, Pipeline
    - Frontend patterns from the interactive docs sites
 
-10. **[API Standards](docs/API_STANDARDS.md)** (12 min read)
+10. **[API Standards](docs/github/API_STANDARDS.md)** (12 min read)
    - URL versioning, resource serialization, response envelopes
    - Pagination, filtering, rate limiting, CORS
    - Minimum API test coverage
 
-11. **[Async Patterns](docs/ASYNC_PATTERNS.md)** (12 min read)
+11. **[Async Patterns](docs/github/ASYNC_PATTERNS.md)** (12 min read)
     - When to queue; job idempotency and failure handling
     - Scheduler and worker operations standards
     - Broadcasting channels and payload rules
 
-12. **[Monorepo Structure](docs/MONOREPO_STRUCTURE.md)** (10 min read)
+12. **[Monorepo Structure](docs/github/MONOREPO_STRUCTURE.md)** (10 min read)
     - Workspaces, shared configs, path-filtered CI
     - Git submodule two-step workflow
 
 ### Operations
 
-13. **[Deployment Guide](docs/DEPLOYMENT_GUIDE.md)** (15 min read)
+13. **[Deployment Guide](docs/github/DEPLOYMENT_GUIDE.md)** (15 min read)
     - Gated pipelines: lint → test → deploy
     - GitHub Pages lessons, zero-downtime, expand/contract migrations
     - Health checks and rollback procedures
 
-14. **[Security & Performance](docs/SECURITY_PERFORMANCE.md)** (12 min read)
+14. **[Security & Performance](docs/github/SECURITY_PERFORMANCE.md)** (12 min read)
     - Production security baseline: CSRF/XSS, auth, mass assignment, secrets
     - Performance baseline: N+1 prevention, caching, rate limiting
 
 ### Project Setup Standards
 
-15. **[File Structure](docs/FILE_STRUCTURE.md)** (10 min read)
+15. **[File Structure](docs/github/FILE_STRUCTURE.md)** (10 min read)
     - PHP/Laravel project layout
     - JavaScript/React project layout
     - TypeScript/Backend structure
     - Naming conventions and .gitignore patterns
 
-16. **[Documentation Standards](docs/DOCUMENTATION_STANDARDS.md)** (12 min read)
+16. **[Documentation Standards](docs/github/DOCUMENTATION_STANDARDS.md)** (12 min read)
     - Professional README with dynamic headers
     - CHANGELOG.md using "Keep a Changelog" format
     - Contributing guides and security policy
     - Code examples and markdown style
 
-17. **[Implementation Checklist](docs/IMPLEMENTATION_CHECKLIST.md)** (8 min read)
+17. **[Implementation Checklist](docs/github/IMPLEMENTATION_CHECKLIST.md)** (8 min read)
     - Phase-by-phase adoption path for new projects
     - Minimum viable setup for small projects
 
 ### Tips & Tricks
 
-18. **[Git Tips & Tricks](docs/GIT_TIPS_TRICKS.md)** (12 min read)
+18. **[Git Tips & Tricks](docs/github/GIT_TIPS_TRICKS.md)** (12 min read)
     - Reflog recovery, bisect, worktrees, rerere, autosquash
     - Precision staging with `add -p`, history archaeology
     - Config quality-of-life and Windows specifics
 
-19. **[Actions Advanced](docs/ACTIONS_ADVANCED.md)** (15 min read)
+19. **[Actions Advanced](docs/github/ACTIONS_ADVANCED.md)** (15 min read)
     - Reusable workflows and composite actions
     - Caching, dynamic matrices, job outputs, concurrency
     - Security hardening (least-privilege tokens, OIDC, action pinning)
 
-20. **[Nice to Know](docs/NICE_TO_KNOW.md)** (10 min read)
+20. **[Nice to Know](docs/github/NICE_TO_KNOW.md)** (10 min read)
     - GitHub URL tricks, keyboard shortcuts, markdown extras
     - CODEOWNERS, repo templates, autolinks
     - `gh` CLI power usage and the API escape hatch
@@ -441,7 +441,7 @@ project/
 - **labeler.yml** — Auto-label PRs based on files changed
 - **static-analysis.yml** — Code quality and style checks
 
-All deploy templates share the **gating pattern**: quality checks are jobs the deploy `needs:` — failing lint or tests blocks the deploy entirely. See [Linting Gates](docs/LINTING_GATES.md) and the [templates README](templates/.github/workflows/README.md).
+All deploy templates share the **gating pattern**: quality checks are jobs the deploy `needs:` — failing lint or tests blocks the deploy entirely. See [Linting Gates](docs/github/LINTING_GATES.md) and the [templates README](templates/.github/workflows/README.md).
 
 ### Copy to Your Project
 
@@ -517,11 +517,11 @@ cp -r github-workflows/templates/.github/ your-project/
 ### Reference in Issues/PRs
 
 When discussing standards, link to relevant docs:
-- Branch questions → [BRANCHING_STRATEGY.md](docs/BRANCHING_STRATEGY.md)
-- Commit format → [COMMIT_STANDARDS.md](docs/COMMIT_STANDARDS.md)
-- Release process → [RELEASE_STANDARDS.md](docs/RELEASE_STANDARDS.md)
-- File structure → [FILE_STRUCTURE.md](docs/FILE_STRUCTURE.md)
-- Documentation → [DOCUMENTATION_STANDARDS.md](docs/DOCUMENTATION_STANDARDS.md)
+- Branch questions → [BRANCHING_STRATEGY.md](docs/github/BRANCHING_STRATEGY.md)
+- Commit format → [COMMIT_STANDARDS.md](docs/github/COMMIT_STANDARDS.md)
+- Release process → [RELEASE_STANDARDS.md](docs/github/RELEASE_STANDARDS.md)
+- File structure → [FILE_STRUCTURE.md](docs/github/FILE_STRUCTURE.md)
+- Documentation → [DOCUMENTATION_STANDARDS.md](docs/github/DOCUMENTATION_STANDARDS.md)
 
 ## 📊 Visual Workflow Diagrams
 

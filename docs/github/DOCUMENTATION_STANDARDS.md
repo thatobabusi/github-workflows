@@ -203,7 +203,7 @@ Do not open public GitHub issues for vulnerabilities.
 ```markdown
 # Documentation
 
-- [Branching Strategy](BRANCHING_STRATEGY.md)
+- [Branching Strategy](github/BRANCHING_STRATEGY.md)
 - [Commit Standards](COMMIT_STANDARDS.md)
 - [Release Process](RELEASE_STANDARDS.md)
 - [Getting Started](guides/getting-started.md)

@@ -32,7 +32,7 @@ jobs:
     # ...
 ```
 
-If lint or tests fail, the deploy job never starts. See [Linting Gates](../../../docs/LINTING_GATES.md) for the full doctrine and the gotchas (BOM-free JSON configs, glob quoting, pragmatic rule relaxation).
+If lint or tests fail, the deploy job never starts. See [Linting Gates](../../../docs/github/LINTING_GATES.md) for the full doctrine and the gotchas (BOM-free JSON configs, glob quoting, pragmatic rule relaxation).
 
 ## Customization Checklist
 

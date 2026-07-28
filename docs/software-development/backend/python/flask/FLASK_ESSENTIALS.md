@@ -59,7 +59,7 @@ def register_error_handlers(app: Flask) -> None:
         return {"message": "Internal server error"}, 500    # opaque in prod
 ```
 
-[API Standards](../../../../API_STANDARDS.md) envelope and status codes; stacks never leak.
+[API Standards](../../../../github/API_STANDARDS.md) envelope and status codes; stacks never leak.
 
 ## The Standard Extension Set
 
@@ -76,7 +76,7 @@ Counting four+? That's the outgrown signal.
 ## Context Gotchas
 
 - `request`, `g`, `current_app` are **context-locals** — valid only during a request; background threads need `app.app_context()`
-- Anything slow leaves the request: queue it (RQ/Celery — [async rules](../../../../ASYNC_PATTERNS.md)); Flask is sync-first (one blocked worker = one fewer worker)
+- Anything slow leaves the request: queue it (RQ/Celery — [async rules](../../../../github/ASYNC_PATTERNS.md)); Flask is sync-first (one blocked worker = one fewer worker)
 - Store per-request state on `g`, never on module globals
 
 ## Testing
@@ -103,7 +103,7 @@ def test_create_order(client, auth_headers):
 gunicorn "app:create_app()" -w 4 -b 0.0.0.0:8000   # never the dev server
 ```
 
-Behind nginx or in a [container](../../../docker/DOCKER_CHEAT_SHEET.md); env-var config; health endpoint; the [deploy gates](../../../../DEPLOYMENT_GUIDE.md) unchanged.
+Behind nginx or in a [container](../../../docker/DOCKER_CHEAT_SHEET.md); env-var config; health endpoint; the [deploy gates](../../../../github/DEPLOYMENT_GUIDE.md) unchanged.
 
 ## See Also
 

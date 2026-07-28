@@ -142,4 +142,4 @@ The rule that keeps it honest: **notebooks explore, `src/` ships.** Anything run
 - [Python Coding Styles](PYTHON_CODING_STYLES.md)
 - [Python Frameworks](PYTHON_FRAMEWORKS.md)
 - [PHP Project Structures](../php/PHP_PROJECT_STRUCTURES.md) — same philosophy, different runtime
-- [File Structure](../../../FILE_STRUCTURE.md)
+- [File Structure](../../../github/FILE_STRUCTURE.md)

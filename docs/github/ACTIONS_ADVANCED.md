@@ -229,4 +229,4 @@ gh run watch <id> --exit-status      # block until done, exit non-zero on failur
 - [Linting Gates](LINTING_GATES.md)
 - [Quality Gates](QUALITY_GATES.md)
 - [Nice to Know](NICE_TO_KNOW.md)
-- [Workflow templates](../templates/.github/workflows/README.md)
+- [Workflow templates](../../templates/.github/workflows/README.md)

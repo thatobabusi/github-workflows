@@ -29,7 +29,7 @@ const response = await fetch('/api/orders', {
 });
 ```
 
-CSRF header on every state-changing request in session-auth apps — [the Laravel/session rule](../../../SECURITY_PERFORMANCE.md).
+CSRF header on every state-changing request in session-auth apps — [the Laravel/session rule](../../../github/SECURITY_PERFORMANCE.md).
 
 ## A Sane Wrapper (write once per project)
 
@@ -115,7 +115,7 @@ a.click(); URL.revokeObjectURL(a.href);
 | Need | Tool |
 |------|------|
 | Server → client stream (progress, feeds) | **EventSource** (SSE) — auto-reconnects, plain HTTP |
-| Bidirectional realtime | WebSocket ([broadcasting rules](../../../ASYNC_PATTERNS.md)) |
+| Bidirectional realtime | WebSocket ([broadcasting rules](../../../github/ASYNC_PATTERNS.md)) |
 | Fire-and-forget on page unload | `navigator.sendBeacon()` |
 | Request dedup/cache/retry in apps | TanStack Query ([React](../javascript/react/REACT_ESSENTIALS.md)/[Vue](../javascript/vuejs/VUE_ESSENTIALS.md)) — stop hand-rolling |
 
@@ -133,6 +133,6 @@ xhr.send();
 
 ## See Also
 
-- [API Standards](../../../API_STANDARDS.md) — the server side of these calls
+- [API Standards](../../../github/API_STANDARDS.md) — the server side of these calls
 - [jQuery Essentials](../jquery/JQUERY_ESSENTIALS.md) — `$.ajax` migration
-- [Security & Performance](../../../SECURITY_PERFORMANCE.md) — CSRF, CORS
+- [Security & Performance](../../../github/SECURITY_PERFORMANCE.md) — CSRF, CORS

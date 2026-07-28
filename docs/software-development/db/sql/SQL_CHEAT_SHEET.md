@@ -102,7 +102,7 @@ VALUES (42, 'theme', 'dark')
 ON DUPLICATE KEY UPDATE value = VALUES(value);
 ```
 
-Upserts + unique constraints = the [idempotency](../../../ASYNC_PATTERNS.md) workhorse for jobs and imports.
+Upserts + unique constraints = the [idempotency](../../../github/ASYNC_PATTERNS.md) workhorse for jobs and imports.
 
 ## Useful Patterns
 
@@ -148,10 +148,10 @@ EXPLAIN ANALYZE SELECT ...;
 
 - Write the `WHERE` before the `UPDATE`/`DELETE` verb — or run it as a `SELECT` first
 - Wrap risky data fixes in an explicit transaction; verify, then `COMMIT`
-- Always parameterized (`?`/`:name`) — string-built SQL is [injection](../../../SECURITY_PERFORMANCE.md), full stop
+- Always parameterized (`?`/`:name`) — string-built SQL is [injection](../../../github/SECURITY_PERFORMANCE.md), full stop
 - Production data fixes get a migration or an audited script, never a console one-liner from memory
 
 ## See Also
 
 - [Database Design](../DATABASE_DESIGN.md)
-- [Security & Performance](../../../SECURITY_PERFORMANCE.md)
+- [Security & Performance](../../../github/SECURITY_PERFORMANCE.md)

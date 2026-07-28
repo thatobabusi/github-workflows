@@ -71,15 +71,15 @@ Also watch `Extra`: `Using filesort` / `Using temporary` on hot queries = index 
 ## Locking Gotchas
 
 - Default isolation **REPEATABLE READ** (Postgres/SQL Server default READ COMMITTED) — gap locks under load can deadlock inserts; many ORMs/apps run READ COMMITTED deliberately
-- Deadlocks are retryable events, not bugs: catch error 1213, retry the transaction ([idempotency rules](../../../ASYNC_PATTERNS.md))
+- Deadlocks are retryable events, not bugs: catch error 1213, retry the transaction ([idempotency rules](../../../github/ASYNC_PATTERNS.md))
 - `SELECT ... FOR UPDATE` to lock rows you're about to update in multi-step transactions
 
 ## Operational Checklist
 
-- [ ] Backups: nightly `mysqldump --single-transaction` minimum; test restores ([Deployment Guide](../../../DEPLOYMENT_GUIDE.md))
+- [ ] Backups: nightly `mysqldump --single-transaction` minimum; test restores ([Deployment Guide](../../../github/DEPLOYMENT_GUIDE.md))
 - [ ] Slow query log on and reviewed; `pt-query-digest` for summaries
 - [ ] Every FK indexed (InnoDB does this automatically — verify anyway)
-- [ ] App user has least privilege — no root in `.env`, no `GRANT ALL` ([security](../../../SECURITY_PERFORMANCE.md))
+- [ ] App user has least privilege — no root in `.env`, no `GRANT ALL` ([security](../../../github/SECURITY_PERFORMANCE.md))
 - [ ] Laravel: `DB_CONNECTION=mysql`, strict mode on (framework default)
 
 ## vs The Field

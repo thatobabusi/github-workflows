@@ -20,7 +20,7 @@ Semantic, accessible HTML — the layer everything else stands on. Most "CSS pro
 </html>
 ```
 
-`lang` set (screen readers + translation), charset first, viewport always, scripts at the end ([the lint rule](../../../LINTING_GATES.md) `head-script-disabled` enforces it).
+`lang` set (screen readers + translation), charset first, viewport always, scripts at the end ([the lint rule](../../../github/LINTING_GATES.md) `head-script-disabled` enforces it).
 
 ## Semantic Layout — div Is the Last Resort
 
@@ -105,7 +105,7 @@ Landmarks give screen-reader users a page map and crawlers structure for free. H
 
 ## Validation
 
-`npx html-validate index.html` or W3C validator — HTMLHint runs in the [lint gate](../../../LINTING_GATES.md); Lighthouse's accessibility audit catches the rest.
+`npx html-validate index.html` or W3C validator — HTMLHint runs in the [lint gate](../../../github/LINTING_GATES.md); Lighthouse's accessibility audit catches the rest.
 
 ## See Also
 

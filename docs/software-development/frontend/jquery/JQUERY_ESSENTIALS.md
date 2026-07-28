@@ -63,11 +63,11 @@ Vanilla equivalents — replace call-for-call when touching old code:
 | `$(fn)` ready | `DOMContentLoaded` or `defer` scripts |
 | `fadeIn/slideUp` | CSS transitions + class toggle |
 
-*`.innerHTML` with any user data = XSS — escape or use `textContent` ([security rules](../../../SECURITY_PERFORMANCE.md)).
+*`.innerHTML` with any user data = XSS — escape or use `textContent` ([security rules](../../../github/SECURITY_PERFORMANCE.md)).
 
 ## Migration Strategy
 
-1. **Don't big-bang.** Migrate file-by-file as features get touched ([the ratchet principle](../../../QUALITY_GATES.md))
+1. **Don't big-bang.** Migrate file-by-file as features get touched ([the ratchet principle](../../../github/QUALITY_GATES.md))
 2. New features in the old codebase: vanilla or a mounted framework island — never *new* jQuery
 3. The common destination for server-rendered apps isn't React — it's **Livewire/HTMX/Alpine** ([PHP pairings](../../backend/php/PHP_FRAMEWORKS.md)): jQuery's "sprinkle interactivity" job, done declaratively
 4. Drop the dependency only when the last plugin goes — check what Bootstrap version the theme needs ([Bootstrap 5 dropped jQuery](../bootstrap/BOOTSTRAP_ESSENTIALS.md))

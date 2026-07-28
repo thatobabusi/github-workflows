@@ -117,7 +117,7 @@ Type everything: parameters, returns (`: void` included), properties. Untyped is
 }
 ```
 
-Style is enforced by the [lint gate](../../../LINTING_GATES.md), never by review comments — humans review behavior, machines review style.
+Style is enforced by the [lint gate](../../../github/LINTING_GATES.md), never by review comments — humans review behavior, machines review style.
 
 ## Docblocks
 
@@ -139,11 +139,11 @@ Never write `@param string $name The name` — that's the signature repeated in 
 - No `else` after a returning `if`
 - Small classes: a `Service` doing five unrelated things is five services
 - `final class` unless designed for extension
-- Money as integer cents in a value object — never floats ([Design Patterns](../../../DESIGN_PATTERNS.md))
+- Money as integer cents in a value object — never floats ([Design Patterns](../../../github/DESIGN_PATTERNS.md))
 - Comments explain **why**; the code explains what
 
 ## See Also
 
 - [PHP Project Structures](PHP_PROJECT_STRUCTURES.md)
 - [PHP Design Patterns](PHP_DESIGN_PATTERNS.md)
-- [Code Quality](../../../CODE_QUALITY.md)
+- [Code Quality](../../../github/CODE_QUALITY.md)

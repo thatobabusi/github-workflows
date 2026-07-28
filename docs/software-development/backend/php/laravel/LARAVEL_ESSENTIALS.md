@@ -34,7 +34,7 @@ The routing table for code ([full layout](../PHP_PROJECT_STRUCTURES.md)):
 | Query shapes used twice | Model scopes | Copy-pasted where-chains |
 | API output shape | Resources | `return $model` — never |
 | Side effects (mail, cache-bust) | Events + queued Listeners | Inline in the happy path |
-| Slow work (>200ms, not needed now) | [Queued Jobs](../../../../ASYNC_PATTERNS.md) | The request cycle |
+| Slow work (>200ms, not needed now) | [Queued Jobs](../../../../github/ASYNC_PATTERNS.md) | The request cycle |
 
 Controller test: if a controller method exceeds ~10 lines, something above is in the wrong home.
 
@@ -64,9 +64,9 @@ protected function casts(): array
 }
 ```
 
-- `$fillable` whitelist + `create($request->validated())` — the [mass-assignment rule](../../../../SECURITY_PERFORMANCE.md)
+- `$fillable` whitelist + `create($request->validated())` — the [mass-assignment rule](../../../../github/SECURITY_PERFORMANCE.md)
 - Eager load or be caught: `Model::preventLazyLoading(!app()->isProduction())` in AppServiceProvider makes N+1s throw in dev
-- `updateOrCreate` / unique indexes for [idempotent writes](../../../../ASYNC_PATTERNS.md)
+- `updateOrCreate` / unique indexes for [idempotent writes](../../../../github/ASYNC_PATTERNS.md)
 
 ## Request Lifecycle Cheat Line
 
@@ -95,16 +95,16 @@ public function test_owner_can_cancel_order(): void
 }
 ```
 
-Fakes over mocks: `Queue::fake()`, `Notification::fake()`, `Storage::fake()`, `Http::fake()` — then assert. Coverage floors and layers per [Code Quality](../../../../CODE_QUALITY.md).
+Fakes over mocks: `Queue::fake()`, `Notification::fake()`, `Storage::fake()`, `Http::fake()` — then assert. Coverage floors and layers per [Code Quality](../../../../github/CODE_QUALITY.md).
 
 ## Ecosystem Map
 
 | Need | First-Party Answer |
 |------|-------------------|
 | Local dev (Windows/Mac) | **Herd** |
-| Code style | Pint (in the [lint gate](../../../../LINTING_GATES.md)) |
+| Code style | Pint (in the [lint gate](../../../../github/LINTING_GATES.md)) |
 | Static analysis | Larastan |
-| API auth | Sanctum ([API Standards](../../../../API_STANDARDS.md)) |
+| API auth | Sanctum ([API Standards](../../../../github/API_STANDARDS.md)) |
 | Queues dashboard | Horizon (Redis) |
 | Debugging | Telescope (dev) / Pulse (prod vitals) |
 | Server provisioning | Forge |
@@ -113,7 +113,7 @@ Fakes over mocks: `Queue::fake()`, `Notification::fake()`, `Storage::fake()`, `H
 
 ## Deploy Notes
 
-The [Deployment Guide](../../../../DEPLOYMENT_GUIDE.md) applies; Laravel specifics:
+The [Deployment Guide](../../../../github/DEPLOYMENT_GUIDE.md) applies; Laravel specifics:
 
 ```bash
 composer install --no-dev --optimize-autoloader

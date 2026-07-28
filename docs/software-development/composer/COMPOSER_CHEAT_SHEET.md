@@ -70,7 +70,7 @@ The golden rule: **`install` obeys the lock; `update` rewrites it.** CI and prod
 }
 ```
 
-- Same script verbs as every stack (`lint`, `test`) — the [lint gate](../../LINTING_GATES.md) contract
+- Same script verbs as every stack (`lint`, `test`) — the [lint gate](../../github/LINTING_GATES.md) contract
 - `sort-packages: true` keeps diffs clean
 - Platform requirement (`"php": "^8.3"`) always declared — fails fast on wrong environments
 
@@ -117,7 +117,7 @@ Path repositories symlink by default — edits in the package are live in the ap
 ## Publishing a Package
 
 - [PDS skeleton](../backend/php/PHP_PROJECT_STRUCTURES.md) layout; `composer validate --strict` clean
-- Tag SemVer releases ([Release Standards](../../RELEASE_STANDARDS.md)) — Packagist reads tags
+- Tag SemVer releases ([Release Standards](../../github/RELEASE_STANDARDS.md)) — Packagist reads tags
 - Submit once to packagist.org; enable the GitHub webhook for auto-updates
 - `"minimum-stability"` untouched (stable); use `"prefer-stable": true` if you must allow dev deps
 
@@ -135,4 +135,4 @@ Path repositories symlink by default — edits in the package are live in the ap
 
 - [PHP Project Structures](../backend/php/PHP_PROJECT_STRUCTURES.md)
 - [PHP Frameworks](../backend/php/PHP_FRAMEWORKS.md)
-- [Security & Performance](../../SECURITY_PERFORMANCE.md) — `composer audit` in CI
+- [Security & Performance](../../github/SECURITY_PERFORMANCE.md) — `composer audit` in CI

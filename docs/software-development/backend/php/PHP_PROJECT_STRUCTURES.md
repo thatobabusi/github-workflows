@@ -106,7 +106,7 @@ app/
 └── tests/{Unit,Feature}
 ```
 
-Convention over invention — full layout and role rules in [File Structure](../../../FILE_STRUCTURE.md). Don't fight the skeleton; extend it (`Services/`, `Actions/`, `Support/`) rather than relocating it.
+Convention over invention — full layout and role rules in [File Structure](../../../github/FILE_STRUCTURE.md). Don't fight the skeleton; extend it (`Services/`, `Actions/`, `Support/`) rather than relocating it.
 
 ## 6. Modular Monolith (large app, clear domains)
 
@@ -165,11 +165,11 @@ Use when the business rules are the hard part. For CRUD-heavy apps, this is cere
 - PSR-4: namespace path = directory path, one class per file
 - `tests/` mirrors the source structure
 - Writable dirs (`storage/`, `var/`) are gitignored and outside the webroot
-- Composer scripts expose the same verbs everywhere: `lint`, `test` ([Linting Gates](../../../LINTING_GATES.md))
+- Composer scripts expose the same verbs everywhere: `lint`, `test` ([Linting Gates](../../../github/LINTING_GATES.md))
 
 ## See Also
 
 - [PHP Coding Styles](PHP_CODING_STYLES.md)
 - [PHP Frameworks](PHP_FRAMEWORKS.md)
-- [File Structure](../../../FILE_STRUCTURE.md)
-- [Monorepo Structure](../../../MONOREPO_STRUCTURE.md)
+- [File Structure](../../../github/FILE_STRUCTURE.md)
+- [Monorepo Structure](../../../github/MONOREPO_STRUCTURE.md)

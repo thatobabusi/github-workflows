@@ -122,7 +122,7 @@ Require a focused security review when a PR touches:
 
 ## CI Enforcement
 
-The [security-scan.yml](../templates/.github/workflows/security-scan.yml) workflow runs on every PR:
+The [security-scan.yml](../../templates/.github/workflows/security-scan.yml) workflow runs on every PR:
 
 - Dependency audit (`composer audit` / `npm audit`)
 - Secret scanning (gitleaks)

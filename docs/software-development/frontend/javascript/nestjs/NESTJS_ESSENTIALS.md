@@ -42,7 +42,7 @@ export class CreateOrderDto {
 app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
 ```
 
-`whitelist: true` strips unknown fields — the [mass-assignment rule](../../../../SECURITY_PERFORMANCE.md) for Node.
+`whitelist: true` strips unknown fields — the [mass-assignment rule](../../../../github/SECURITY_PERFORMANCE.md) for Node.
 
 ## The Request Pipeline
 
@@ -72,7 +72,7 @@ Knowing which slot a concern belongs to is 80% of NestJS competence — the same
 ConfigModule.forRoot({ validate: (env) => envSchema.parse(env), isGlobal: true });
 ```
 
-ORM: TypeORM or Prisma both first-class; repositories injected, entities never returned raw from controllers ([API Standards](../../../../API_STANDARDS.md) — map to response DTOs).
+ORM: TypeORM or Prisma both first-class; repositories injected, entities never returned raw from controllers ([API Standards](../../../../github/API_STANDARDS.md) — map to response DTOs).
 
 ## Testing
 
@@ -98,4 +98,4 @@ Cost: decorator/DI ceremony on small services; learning curve. Payoff begins aro
 
 - [Node Essentials](../../../backend/node/NODE_ESSENTIALS.md)
 - [Angular Essentials](../angularjs/ANGULAR_ESSENTIALS.md) — the architectural sibling
-- [API Standards](../../../../API_STANDARDS.md)
+- [API Standards](../../../../github/API_STANDARDS.md)

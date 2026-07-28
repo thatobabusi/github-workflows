@@ -48,7 +48,7 @@ class OrderQuerySet(models.QuerySet):
 
 ## ORM Performance Rules
 
-The [N+1 rules](../../../../SECURITY_PERFORMANCE.md) in Django idiom:
+The [N+1 rules](../../../../github/SECURITY_PERFORMANCE.md) in Django idiom:
 
 ```python
 # select_related: FK/one-to-one (SQL join)
@@ -89,7 +89,7 @@ config/settings/dev.py       # DEBUG=True, toolbar
 config/settings/production.py# DEBUG=False, security flags
 ```
 
-- `django-environ`/env vars for secrets ([the universal rule](../../../../SECURITY_PERFORMANCE.md))
+- `django-environ`/env vars for secrets ([the universal rule](../../../../github/SECURITY_PERFORMANCE.md))
 - Production flags: `DEBUG=False`, `ALLOWED_HOSTS` set, `SECURE_HSTS_SECONDS`, `CSRF_TRUSTED_ORIGINS`
 - `python manage.py check --deploy` before every launch
 
@@ -109,11 +109,11 @@ class OrderViewSet(viewsets.ModelViewSet):
         return self.request.user.orders.select_related("user")
 ```
 
-Serializers are the [Resource layer](../../../../API_STANDARDS.md); viewsets + routers give the REST conventions for free.
+Serializers are the [Resource layer](../../../../github/API_STANDARDS.md); viewsets + routers give the REST conventions for free.
 
 ## Background Work & Testing
 
-- Celery (or `django-tasks`) for anything slow — [async rules](../../../../ASYNC_PATTERNS.md) apply: idempotent, bounded retries
+- Celery (or `django-tasks`) for anything slow — [async rules](../../../../github/ASYNC_PATTERNS.md) apply: idempotent, bounded retries
 - Tests: `pytest-django` + `factory_boy` factories; `assertNumQueries` locks in query counts
 
 ## See Also

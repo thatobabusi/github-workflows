@@ -73,7 +73,7 @@ The rules, distilled:
 | `.dockerignore` from day one | `node_modules`, `.git`, `.env` never enter the context |
 | `USER app`, never root | Container escape ≠ root on host |
 | One process per container | Logs, restarts, scaling all stay sane |
-| `HEALTHCHECK` always | Orchestrators and [deploy verification](../../DEPLOYMENT_GUIDE.md) need it |
+| `HEALTHCHECK` always | Orchestrators and [deploy verification](../../github/DEPLOYMENT_GUIDE.md) need it |
 
 ```
 # .dockerignore — minimum viable
@@ -132,7 +132,7 @@ docker compose down            # add -v to also wipe volumes
 
 ## Images in CI
 
-The [gating pattern](../../LINTING_GATES.md) extends to images:
+The [gating pattern](../../github/LINTING_GATES.md) extends to images:
 
 ```yaml
 - name: Build image
@@ -160,6 +160,6 @@ Tag with the git SHA (traceable) plus a moving tag (`latest`, `1.2`); push only 
 
 ## See Also
 
-- [Deployment Guide](../../DEPLOYMENT_GUIDE.md)
+- [Deployment Guide](../../github/DEPLOYMENT_GUIDE.md)
 - [CLI Cheat Sheet](../cli/CLI_CHEAT_SHEET.md)
 - [Azure Essentials](../azure/AZURE_ESSENTIALS.md) — running these images in the cloud

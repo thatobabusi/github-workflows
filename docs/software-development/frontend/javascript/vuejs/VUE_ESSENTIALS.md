@@ -135,7 +135,7 @@ test('emits cancel with the order id', async () => {
 });
 ```
 
-Same doctrine as [React testing](../react/REACT_ESSENTIALS.md): assert rendered behavior, not internals; Playwright for [E2E](../../../../TESTING.md).
+Same doctrine as [React testing](../react/REACT_ESSENTIALS.md): assert rendered behavior, not internals; Playwright for [E2E](../../../../github/TESTING.md).
 
 ## Vue vs React (honest one-paragraph version)
 

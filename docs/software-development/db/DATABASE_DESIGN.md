@@ -68,13 +68,13 @@ EXPLAIN ANALYZE SELECT ...;   -- Seq Scan on a big table in a hot path = missing
 All schema change flows through versioned migrations ([Laravel](../backend/php/PHP_FRAMEWORKS.md) migrations, Alembic, Flyway):
 
 - One concern per migration; irreversible ones documented as such
-- **Expand → migrate → contract** for breaking changes — full procedure in the [Deployment Guide](../../DEPLOYMENT_GUIDE.md)
+- **Expand → migrate → contract** for breaking changes — full procedure in the [Deployment Guide](../../github/DEPLOYMENT_GUIDE.md)
 - Adding an index to a big table: `CREATE INDEX CONCURRENTLY` (Postgres) / online DDL (MySQL) — never lock a hot table
 - Never edit a merged migration; ship a new one
 
 ## Query Hygiene
 
-The [performance rules](../../SECURITY_PERFORMANCE.md) in SQL terms:
+The [performance rules](../../github/SECURITY_PERFORMANCE.md) in SQL terms:
 
 - Kill N+1s with joins/eager loading; verify with query logs
 - `SELECT` named columns on hot paths, not `*`
@@ -96,5 +96,5 @@ Both are correct defaults; consistency within an ecosystem beats micro-optimizat
 ## See Also
 
 - [SQL Cheat Sheet](sql/SQL_CHEAT_SHEET.md)
-- [Deployment Guide](../../DEPLOYMENT_GUIDE.md) — migrations in production
-- [Security & Performance](../../SECURITY_PERFORMANCE.md)
+- [Deployment Guide](../../github/DEPLOYMENT_GUIDE.md) — migrations in production
+- [Security & Performance](../../github/SECURITY_PERFORMANCE.md)

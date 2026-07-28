@@ -87,7 +87,7 @@ $order->cancel();
 $em->flush();                        // computes and runs the UPDATEs
 ```
 
-vs Eloquent: entities never touch the DB themselves — pure domain objects, [DDD layers](../PHP_PROJECT_STRUCTURES.md) come naturally. Cost: more ceremony for simple CRUD. Custom queries live in repository classes (QueryBuilder/DQL); the [N+1 rules](../../../../SECURITY_PERFORMANCE.md) apply — `->addSelect()` joins are your eager loading.
+vs Eloquent: entities never touch the DB themselves — pure domain objects, [DDD layers](../PHP_PROJECT_STRUCTURES.md) come naturally. Cost: more ceremony for simple CRUD. Custom queries live in repository classes (QueryBuilder/DQL); the [N+1 rules](../../../../github/SECURITY_PERFORMANCE.md) apply — `->addSelect()` joins are your eager loading.
 
 ## Messenger (Queues)
 
@@ -116,12 +116,12 @@ framework:
             App\Message\SendOrderConfirmation: async
 ```
 
-`messenger:consume async` under supervisor; retries + failure transport configured, per the [async rules](../../../../ASYNC_PATTERNS.md).
+`messenger:consume async` under supervisor; retries + failure transport configured, per the [async rules](../../../../github/ASYNC_PATTERNS.md).
 
 ## Forms, Validation, Serializer
 
 - Validation as attributes on DTOs/entities: `#[Assert\NotBlank]`, `#[Assert\Positive]`
-- Serialization groups control API shape (`order:read`, `order:write`) — the [Resource-layer rule](../../../../API_STANDARDS.md) via config
+- Serialization groups control API shape (`order:read`, `order:write`) — the [Resource-layer rule](../../../../github/API_STANDARDS.md) via config
 - The Form component earns its complexity in admin-heavy apps; for JSON APIs, MapRequestPayload DTOs are lighter
 
 ## Environments & Config

@@ -104,7 +104,7 @@ Uncontrolled + validated beats hand-rolled controlled-input state for anything p
 2. `React.memo` for expensive leaf components with stable props
 3. Virtualize long lists (TanStack Virtual) past ~100 rows
 4. `React.lazy` + `Suspense` for route-level code splitting
-5. Measure with React DevTools Profiler — never optimize blind ([the profiling rule](../../../../CODE_QUALITY.md))
+5. Measure with React DevTools Profiler — never optimize blind ([the profiling rule](../../../../github/CODE_QUALITY.md))
 
 ## Testing
 
@@ -119,7 +119,7 @@ test('cancels an order', async () => {
 });
 ```
 
-Query priority: `getByRole` > `getByLabelText` > `getByText` > `getByTestId` (last resort). E2E flows in Playwright per the [testing doctrine](../../../../TESTING.md).
+Query priority: `getByRole` > `getByLabelText` > `getByText` > `getByTestId` (last resort). E2E flows in Playwright per the [testing doctrine](../../../../github/TESTING.md).
 
 ## Ecosystem Defaults
 
