@@ -40,51 +40,51 @@ const app = {
             'core': {
                 title: '📌 Core Standards',
                 files: [
-                    { name: 'Branching Strategy', file: 'BRANCHING_STRATEGY.md' },
-                    { name: 'Commit Standards', file: 'COMMIT_STANDARDS.md' },
-                    { name: 'Release Standards', file: 'RELEASE_STANDARDS.md' },
-                    { name: 'Pull Request Process', file: 'PULL_REQUEST_PROCESS.md' }
+                    { name: 'Branching Strategy', file: 'github/BRANCHING_STRATEGY.md' },
+                    { name: 'Commit Standards', file: 'github/COMMIT_STANDARDS.md' },
+                    { name: 'Release Standards', file: 'github/RELEASE_STANDARDS.md' },
+                    { name: 'Pull Request Process', file: 'github/PULL_REQUEST_PROCESS.md' }
                 ]
             },
             'quality': {
                 title: '✅ Quality & Gates',
                 files: [
-                    { name: 'Code Quality', file: 'CODE_QUALITY.md' },
-                    { name: 'Linting Gates', file: 'LINTING_GATES.md' },
-                    { name: 'Quality Gates', file: 'QUALITY_GATES.md' },
-                    { name: 'Testing', file: 'TESTING.md' }
+                    { name: 'Code Quality', file: 'github/CODE_QUALITY.md' },
+                    { name: 'Linting Gates', file: 'github/LINTING_GATES.md' },
+                    { name: 'Quality Gates', file: 'github/QUALITY_GATES.md' },
+                    { name: 'Testing', file: 'github/TESTING.md' }
                 ]
             },
             'architecture': {
                 title: '🏗️ Architecture',
                 files: [
-                    { name: 'Design Patterns', file: 'DESIGN_PATTERNS.md' },
-                    { name: 'API Standards', file: 'API_STANDARDS.md' },
-                    { name: 'Async Patterns', file: 'ASYNC_PATTERNS.md' },
-                    { name: 'Monorepo Structure', file: 'MONOREPO_STRUCTURE.md' }
+                    { name: 'Design Patterns', file: 'github/DESIGN_PATTERNS.md' },
+                    { name: 'API Standards', file: 'github/API_STANDARDS.md' },
+                    { name: 'Async Patterns', file: 'github/ASYNC_PATTERNS.md' },
+                    { name: 'Monorepo Structure', file: 'github/MONOREPO_STRUCTURE.md' }
                 ]
             },
             'operations': {
                 title: '🚀 Operations',
                 files: [
-                    { name: 'Deployment Guide', file: 'DEPLOYMENT_GUIDE.md' },
-                    { name: 'Security & Performance', file: 'SECURITY_PERFORMANCE.md' }
+                    { name: 'Deployment Guide', file: 'github/DEPLOYMENT_GUIDE.md' },
+                    { name: 'Security & Performance', file: 'github/SECURITY_PERFORMANCE.md' }
                 ]
             },
             'setup': {
                 title: '🛠️ Project Setup',
                 files: [
-                    { name: 'File Structure', file: 'FILE_STRUCTURE.md' },
-                    { name: 'Documentation Standards', file: 'DOCUMENTATION_STANDARDS.md' },
-                    { name: 'Implementation Checklist', file: 'IMPLEMENTATION_CHECKLIST.md' }
+                    { name: 'File Structure', file: 'github/FILE_STRUCTURE.md' },
+                    { name: 'Documentation Standards', file: 'github/DOCUMENTATION_STANDARDS.md' },
+                    { name: 'Implementation Checklist', file: 'github/IMPLEMENTATION_CHECKLIST.md' }
                 ]
             },
             'tips': {
                 title: '💡 Tips & Tricks',
                 files: [
-                    { name: 'Git Tips & Tricks', file: 'GIT_TIPS_TRICKS.md' },
-                    { name: 'Actions Advanced', file: 'ACTIONS_ADVANCED.md' },
-                    { name: 'Nice to Know', file: 'NICE_TO_KNOW.md' }
+                    { name: 'Git Tips & Tricks', file: 'github/GIT_TIPS_TRICKS.md' },
+                    { name: 'Actions Advanced', file: 'github/ACTIONS_ADVANCED.md' },
+                    { name: 'Nice to Know', file: 'github/NICE_TO_KNOW.md' }
                 ]
             },
             'seo': {
